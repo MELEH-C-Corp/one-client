@@ -48,7 +48,7 @@
       },
     },
     "apps/extension": {
-      "name": "@uniswap/extension",
+      "name": "@meleh/extension",
       "version": "0.0.0",
       "dependencies": {
         "@apollo/client": "3.11.10",
@@ -4630,7 +4630,7 @@
 
     "@uniswap/ethers-rs-mobile": ["@uniswap/ethers-rs-mobile@0.0.5", "", {}, "sha512-xCRYg4rAh/+Dahb7geIi7vxrCfdLtnYS6v9deos0vUxk89vCqe1XiXZLyuWgBSyL4NrOE9q8LJRMv5iN39jXaA=="],
 
-    "@uniswap/extension": ["@uniswap/extension@workspace:apps/extension"],
+    "@meleh/extension": ["@meleh/extension@workspace:apps/extension"],
 
     "@uniswap/lib": ["@uniswap/lib@4.0.1-alpha", "", {}, "sha512-f6UIliwBbRsgVLxIaBANF6w09tYqc6Y/qXdsrbEmXHyFA7ILiKrIwRFXe1yOg8M3cksgVsO9N7yuL2DdCGQKBA=="],
 

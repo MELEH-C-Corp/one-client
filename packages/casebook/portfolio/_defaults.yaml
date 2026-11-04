@@ -1,6 +1,6 @@
 product_area: portfolio
 platforms: [web, extension, mobile]
-nxProjects: ["@universe/web", uniswap, wallet, "@uniswap/extension", "@uniswap/mobile"]
+nxProjects: ["@universe/web", uniswap, wallet, "@meleh/extension", "@uniswap/mobile"]
 owners: ["@uniswap/consumer-engagement-fe"]
 
 # Casebook area-registry metadata (read by the engine in apps/cli/src/casebook).

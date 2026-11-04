@@ -1,6 +1,6 @@
 product_area: activity
 platforms: [web, extension, mobile]
-nxProjects: [uniswap, wallet, "@uniswap/extension", "@uniswap/mobile"]
+nxProjects: [uniswap, wallet, "@meleh/extension", "@uniswap/mobile"]
 owners: ["@uniswap/consumer-engagement-fe"]
 
 # Casebook area-registry metadata (read by the engine in apps/cli/src/casebook).

@@ -1,6 +1,6 @@
 product_area: walletconnect
 platforms: [mobile, extension]
-nxProjects: [wallet, uniswap, "@uniswap/extension", "@uniswap/mobile"]
+nxProjects: [wallet, uniswap, "@meleh/extension", "@uniswap/mobile"]
 owners: ["@uniswap/consumer-engagement-fe"]
 
 # Casebook area-registry metadata (read by the engine in apps/cli/src/casebook).

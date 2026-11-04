@@ -1,5 +1,5 @@
 {
-  "name": "@uniswap/extension",
+  "name": "@meleh/extension",
   "version": "0.0.0",
   "browserslist": "last 2 chrome versions",
   "dependencies": {

@@ -1,6 +1,6 @@
 product_area: onboarding
 platforms: [mobile, extension]
-nxProjects: ["@uniswap/mobile", "@uniswap/extension", wallet]
+nxProjects: ["@uniswap/mobile", "@meleh/extension", wallet]
 owners: ["@uniswap/consumer-engagement-fe"]
 
 # Casebook area-registry metadata (read by the engine in apps/cli/src/casebook).

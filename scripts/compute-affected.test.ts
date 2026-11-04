@@ -279,9 +279,9 @@ describe('nx projects passthrough', () => {
   test('the affected list is emitted as a compact JSON array', () => {
     const { outputs } = run({
       changed: ['apps/extension/src/app.tsx'],
-      projects: ['@uniswap/extension', 'ui'],
+      projects: ['@meleh/extension', 'ui'],
     })
-    expect(outputs.PROJECTS).toBe('["@uniswap/extension","ui"]')
+    expect(outputs.PROJECTS).toBe('["@meleh/extension","ui"]')
     expect(outputs.RUN_ALL).toBe('false')
   })
 
