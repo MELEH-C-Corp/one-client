@@ -2,6 +2,8 @@
 // Deployed by .github/workflows/deploy-web.yml on push to meleh/main. Manual: `bun run deploy:workers` in apps/web.
 {
   "name": "meleh-one-web",
+  // MELEH Cloudflare account (not a secret; the API token lives in GitHub secrets).
+  "account_id": "dd123f8c1158b59bc86d71ee6c27114e",
   "main": "build/worker/index.mjs",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat"],
