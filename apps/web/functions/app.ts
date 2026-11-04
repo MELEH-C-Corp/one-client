@@ -61,7 +61,7 @@ export const ENTRY_GATEWAY_URLS = {
 
 // Statsig proxy via Cloudflare gateway — the URL is constant for the web app
 // (platform prefix "interface", service prefix "gating")
-const STATSIG_PROXY_TARGET = 'https://gating.interface.gateway.uniswap.org'
+const STATSIG_PROXY_TARGET = 'https://gating.interface.gateway.meleh.us'
 
 // Drops edge hop headers before re-proxying: a CloudFront-backed upstream 403s requests
 // that already carry a CloudFront `Via`, and x-origin-verify is our edge secret.

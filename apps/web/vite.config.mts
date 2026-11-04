@@ -175,7 +175,7 @@ export default defineConfig(({ mode, command, isPreview }) => {
   if (isIpfsDeploy) {
     // IPFS gateways have no same-origin BFF: hit the entry gateway and statsig proxy directly (both allow cross-origin).
     env.ENABLE_ENTRY_GATEWAY_PROXY = 'false'
-    env.STATSIG_PROXY_URL_OVERRIDE = 'https://gating.interface.gateway.uniswap.org/v1/statsig-proxy'
+    env.STATSIG_PROXY_URL_OVERRIDE = 'https://gating.interface.gateway.meleh.us/v1/statsig-proxy'
   }
   const isOptimizedBuild = isProduction || isEcsDeploy
   const isMinifiedBuild = isOptimizedBuild && !isVercelDeploy
@@ -540,7 +540,7 @@ export default defineConfig(({ mode, command, isPreview }) => {
       port: DEFAULT_PORT,
       proxy: {
         '/config': {
-          target: 'https://gating.interface.gateway.uniswap.org',
+          target: 'https://gating.interface.gateway.meleh.us',
           changeOrigin: true,
           secure: true,
           rewrite: (path) => path.replace(/^\/config/, '/v1/statsig-proxy'),

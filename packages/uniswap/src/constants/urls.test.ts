@@ -41,8 +41,8 @@ describe('getUniswapServiceUrls — beta API target', () => {
     const urls = getUniswapServiceUrls({})
 
     expect(urls.embeddedWalletHostname).toBe(UNISWAP_STAGING_WEB_HOSTNAME)
-    expect(urls.liquidityServiceUrl).toContain('backend-staging')
-    expect(urls.privyEmbeddedWalletUrl).toContain('backend-staging')
+    expect(urls.liquidityServiceUrl).toContain('api-staging.meleh.us')
+    expect(urls.privyEmbeddedWalletUrl).toContain('api-staging.meleh.us')
   })
 
   it('routes beta to prod when isBetaUsingProdApi is true', () => {
@@ -51,8 +51,8 @@ describe('getUniswapServiceUrls — beta API target', () => {
     const urls = getUniswapServiceUrls({ isBetaUsingProdApi: true })
 
     expect(urls.embeddedWalletHostname).toBe(UNISWAP_WEB_HOSTNAME)
-    expect(urls.liquidityServiceUrl).toContain('backend-prod')
-    expect(urls.privyEmbeddedWalletUrl).toContain('backend-prod')
+    expect(urls.liquidityServiceUrl).toBe('https://liquidity.api.meleh.us')
+    expect(urls.privyEmbeddedWalletUrl).toBe('https://api.meleh.us')
   })
 
   it('keeps beta on staging when isBetaUsingProdApi is false', () => {
@@ -61,7 +61,7 @@ describe('getUniswapServiceUrls — beta API target', () => {
     const urls = getUniswapServiceUrls({ isBetaUsingProdApi: false })
 
     expect(urls.embeddedWalletHostname).toBe(UNISWAP_STAGING_WEB_HOSTNAME)
-    expect(urls.liquidityServiceUrl).toContain('backend-staging')
+    expect(urls.liquidityServiceUrl).toContain('api-staging.meleh.us')
   })
 
   it('ignores isBetaUsingProdApi outside a beta build (dev stays on staging/dev hosts)', () => {
@@ -71,26 +71,26 @@ describe('getUniswapServiceUrls — beta API target', () => {
     const urls = getUniswapServiceUrls({ isBetaUsingProdApi: true })
 
     expect(urls.embeddedWalletHostname).toBe('dev.ew.unihq.org')
-    expect(urls.liquidityServiceUrl).toContain('backend-staging')
+    expect(urls.liquidityServiceUrl).toContain('api-staging.meleh.us')
   })
 })
 
 describe('UniswapHelpUrls', () => {
   it('uses the canonical Earn article slug for general help', () => {
     expect(UniswapHelpUrls.articles.earnHelp).toBe(
-      'https://support.uniswap.org/hc/en-us/articles/46865818181901-Earn-on-Uniswap?product_link=web',
+      'https://support.meleh.us/hc/en-us/articles/46865818181901-Earn-on-Uniswap?product_link=web',
     )
   })
 
   it('links Earn transaction failures to the troubleshooting section', () => {
     expect(UniswapHelpUrls.articles.earnTroubleshooting).toBe(
-      'https://support.uniswap.org/hc/en-us/articles/46865818181901-Earn-on-Uniswap?product_link=web#troubleshooting-errors',
+      'https://support.meleh.us/hc/en-us/articles/46865818181901-Earn-on-Uniswap?product_link=web#troubleshooting-errors',
     )
   })
 
   it('links the Uniswap hook provenance badge to its help article', () => {
     expect(UniswapHelpUrls.articles.uniswapBuiltHooks).toBe(
-      'https://support.uniswap.org/hc/en-us/articles/48747190274317?product_link=web',
+      'https://support.meleh.us/hc/en-us/articles/48747190274317?product_link=web',
     )
   })
 })

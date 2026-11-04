@@ -71,7 +71,7 @@ function beforeSend(event: RumEvent, context: RumEventDomainContext): boolean {
     }
   }
 
-  if (event.type === 'resource' && event.resource.url.includes('gateway.uniswap.org')) {
+  if (event.type === 'resource' && event.resource.url.includes('gateway.meleh.us')) {
     const requestHeaders = (context as RumFetchResourceEventDomainContext).requestInit?.headers
     if (requestHeaders) {
       const headersRecord =
@@ -107,7 +107,8 @@ export async function initializeDatadog({
   /** Serving-stack cohort marker ('workers' | 'ecs' | ...); web only. */
   buildType?: string
 }): Promise<void> {
-  if (!isDatadogEnabled()) {
+  // MELEH: telemetry is opt-in — no client token means no Datadog session at all.
+  if (!isDatadogEnabled() || !config.datadogClientToken) {
     return
   }
 

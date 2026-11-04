@@ -1,0 +1,24 @@
+MELEH ONE client
+Copyright (C) 2026 Meleh (Delaware C-corp)
+
+This repository is a modified fork of Uniswap/interface
+(https://github.com/Uniswap/interface), Copyright (C) Uniswap Labs.
+
+The web app (apps/web) and mobile app (apps/mobile) are licensed under the
+GNU General Public License v3.0; see apps/web/LICENSE and apps/mobile/LICENSE.
+Other packages keep the license stated in their own package.json or LICENSE file.
+Upstream copyright and license notices are retained unchanged.
+
+Modifications by Meleh include, among others: MELEH ONE branding (names, logos,
+colors, fonts), bundle identifiers, routing of all backend traffic to *.meleh.us,
+removal of Uniswap analytics/telemetry keys, and a restricted network list.
+The full history of changes is available in this repository's git log on the
+`meleh/main` branch.
+
+Corresponding source: https://github.com/dark-developer-lord/meleh-one-client
+
+"Uniswap" is a trademark of Uniswap Labs. MELEH ONE is not affiliated with,
+endorsed by, or sponsored by Uniswap Labs.
+
+Third-party fonts: Inter and Grenze Gotisch are licensed under the SIL Open Font
+License 1.1.

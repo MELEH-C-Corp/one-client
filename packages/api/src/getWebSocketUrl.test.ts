@@ -35,9 +35,9 @@ describe('getWebSocketUrl', () => {
   })
 
   it.each([
-    [Environment.Development, 'wss://entry-gateway.backend-dev.api.uniswap.org/ws'],
-    [Environment.Staging, 'wss://entry-gateway.backend-staging.api.uniswap.org/ws'],
-    [Environment.Production, 'wss://entry-gateway.backend-prod.api.uniswap.org/ws'],
+    [Environment.Development, 'wss://api-dev.meleh.us/ws'],
+    [Environment.Staging, 'wss://api-staging.meleh.us/ws'],
+    [Environment.Production, 'wss://api.meleh.us/ws'],
   ])('opens against the %s entry gateway', (environment, expected) => {
     mockGetCurrentEnv.mockReturnValue(environment)
     expect(getWebSocketUrl()).toBe(expected)
@@ -58,6 +58,6 @@ describe('getWebSocketUrl', () => {
 
   it('bypasses the proxy path on Vercel, which cannot forward a socket', () => {
     setConfig({ enableEntryGatewayProxy: true, isVercelEnvironment: true })
-    expect(getWebSocketUrl()).toBe('wss://entry-gateway.backend-staging.api.uniswap.org/ws')
+    expect(getWebSocketUrl()).toBe('wss://api-staging.meleh.us/ws')
   })
 })

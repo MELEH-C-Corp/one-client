@@ -69,13 +69,13 @@ describe('chain app support invariants', () => {
     expect(chains).not.toContain(UniverseChainId.Solana)
   })
 
-  it('getEnabledChains includes Solana on web when all rollout flags are enabled', () => {
+  it('getEnabledChains excludes Solana on web because it is outside the MELEH ONE allowlist', () => {
     const { chains } = getEnabledChains({
       appId: AppId.Web,
       isTestnetModeEnabled: false,
       featureFlaggedChainIds: ALL_CHAIN_IDS,
     })
 
-    expect(chains).toContain(UniverseChainId.Solana)
+    expect(chains).not.toContain(UniverseChainId.Solana)
   })
 })

@@ -7,7 +7,7 @@ const baseValues = {
   environment: 'production',
   walletConnectProjectId: 'test-walletconnect-project-id',
   awsApiEndpoint: 'https://api.uniswap.org/v1/graphql',
-  uniswapGatewayDns: 'https://interface.gateway.uniswap.org/v2',
+  uniswapGatewayDns: 'https://interface.gateway.meleh.us/v2',
   statsigApiKey: 'test-statsig-api-key',
   tradingApiKey: 'test-trading-api-key',
   uniswapApiKey: 'test-uniswap-api-key',
@@ -34,8 +34,10 @@ describe('web envFieldRules', () => {
     )
   })
 
-  it('rejects a required API key empty in production', () => {
-    expectParseToThrow({ ...baseValues, statsigApiKey: '' }, 'statsigApiKey  Required for environment "production"')
+  it('does not require Uniswap API keys in production (they live on the MELEH gateway)', () => {
+    const config = parseWebValues({ ...baseValues, statsigApiKey: '', tradingApiKey: '', uniswapApiKey: '' })
+
+    expect(config.environment).toBe('production')
   })
 
   it('accepts a representative production values map', () => {

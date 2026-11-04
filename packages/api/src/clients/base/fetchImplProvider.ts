@@ -5,14 +5,14 @@ type FetchImpl = typeof globalThis.fetch
 
 // Only first-party API hosts are eligible for an override, so an alternative
 // transport can never serve third-party or arbitrary URLs.
-const FIRST_PARTY_HOST = 'uniswap.org'
+const FIRST_PARTY_HOST = 'meleh.us'
 const FIRST_PARTY_HOST_SUFFIX = `.${FIRST_PARTY_HOST}`
 
 let firstPartyFetchOverride: FetchImpl | undefined
 
 /**
  * Installs an alternative fetch implementation for FIRST-PARTY API traffic only
- * (requests to *.uniswap.org issued through createFetchClient).
+ * (requests to *.meleh.us issued through createFetchClient).
  * The override is one-way for the session and never touches globalThis.fetch,
  * so third-party requests and any code using the global keep the platform
  * network stack.

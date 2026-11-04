@@ -271,6 +271,19 @@ export function filterChainIdsByPlatform<T extends number>(chainIds: T[], platfo
   })
 }
 
+/**
+ * MELEH ONE network allowlist: the only chains the product supports (mainnets + their testnets).
+ * Other chain infos stay registered so connectors and types keep working, but never surface in the app.
+ */
+export const MELEH_SUPPORTED_CHAIN_IDS: ReadonlySet<UniverseChainId> = new Set([
+  UniverseChainId.Mainnet,
+  UniverseChainId.Base,
+  UniverseChainId.Unichain,
+  UniverseChainId.ArbitrumOne,
+  UniverseChainId.Sepolia,
+  UniverseChainId.UnichainSepolia,
+])
+
 export function getEnabledChains({
   platform,
   /**
@@ -306,6 +319,11 @@ export function getEnabledChains({
 
     // Filter by feature flags
     if (!featureFlaggedChainIds.includes(chainInfo.id)) {
+      return false
+    }
+
+    // Filter by the MELEH ONE network allowlist
+    if (!MELEH_SUPPORTED_CHAIN_IDS.has(chainInfo.id)) {
       return false
     }
 

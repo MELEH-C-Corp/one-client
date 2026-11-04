@@ -2,11 +2,11 @@ import { isBetaEnv, isProdEnv } from '@universe/environment'
 import { getConfig } from '~/config'
 
 function isAppUniswapOrg({ hostname }: { hostname: string }): boolean {
-  return hostname === 'app.uniswap.org'
+  return hostname === 'app.meleh.us'
 }
 
 function isAppUniswapStagingOrg({ hostname }: { hostname: string }): boolean {
-  return hostname === 'staging.app.uniswap.org'
+  return hostname === 'staging.app.meleh.us'
 }
 
 export function isBrowserRouterEnabled(): boolean {

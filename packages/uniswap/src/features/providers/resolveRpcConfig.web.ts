@@ -39,13 +39,11 @@ const SHARED_UNI_RPC_CONFIG = {
 
 const webResolveUniRpcConfig = createUniRpcConfigResolver({
   ...SHARED_UNI_RPC_CONFIG,
-  // Web app always routes through UniRPC; extension stays gated above.
-  // Playwright e2e runs are the exception: UniRPC requires a session the test
-  // environment can't establish (every /rpc/* call 401s), so let the resolver
-  // fall through to the legacy chain-info URLs, which point at local anvil in e2e.
-  // UniRPC-only chains intentionally follow this too — e2e has no gateway session
-  // for them either — so this overrides the shared chain-aware getter.
-  getFeatureFlag: () => !isE2eTestEnv(),
+  // MELEH: the web app uses the same flag gate as the extension, so until the MELEH
+  // gateway serves /rpc/* the resolver falls through to the public chain-info RPCs.
+  // Playwright e2e runs never use UniRPC: they have no gateway session (every /rpc/*
+  // call 401s) and the legacy chain-info URLs point at local anvil.
+  getFeatureFlag: (chainId: UniverseChainId) => !isE2eTestEnv() && SHARED_UNI_RPC_CONFIG.getFeatureFlag(chainId),
   credentials: 'include',
 })
 

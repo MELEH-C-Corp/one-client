@@ -5,4 +5,4 @@
 // createTestSessionContext.ts (same cycle carve-out); import it everywhere else.
 
 /** Entry Gateway base URL for the staging backend environment. */
-export const STAGING_ENTRY_GATEWAY_API_BASE_URL = 'https://entry-gateway.backend-staging.api.uniswap.org'
+export const STAGING_ENTRY_GATEWAY_API_BASE_URL = 'https://api-staging.meleh.us'

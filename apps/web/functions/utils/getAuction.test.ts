@@ -31,7 +31,7 @@ describe('getAuction', () => {
     })
 
     expect(fetch).toHaveBeenCalledWith(
-      'https://entry-gateway.backend-prod.api.uniswap.org/data.v1.AuctionService/GetAuction',
+      'https://api.meleh.us/data.v1.AuctionService/GetAuction',
       expect.objectContaining({
         body: JSON.stringify({
           chainId: 8453,

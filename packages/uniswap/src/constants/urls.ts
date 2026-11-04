@@ -6,20 +6,22 @@ import {
   getForApiUrl,
   helpUrl,
   PROD_ENTRY_GATEWAY_API_BASE_URL,
+  PROD_ENTRY_GATEWAY_HOST,
   STAGING_ENTRY_GATEWAY_API_BASE_URL,
+  STAGING_ENTRY_GATEWAY_HOST,
   TrafficFlows,
 } from '@universe/api'
 import { isWebApp, isBetaEnv, isDevEnv, isE2eTestEnv } from '@universe/environment'
 
-export const UNISWAP_WEB_HOSTNAME = 'app.uniswap.org'
-export const UNISWAP_STAGING_WEB_HOSTNAME = 'staging.app.uniswap.org'
+export const UNISWAP_WEB_HOSTNAME = 'app.meleh.us'
+export const UNISWAP_STAGING_WEB_HOSTNAME = 'staging.app.meleh.us'
 export const UNISWAP_WEB_URL = `https://${UNISWAP_WEB_HOSTNAME}`
 export const CHROME_EXTENSION_UNINSTALL_URL_PATH = '/extension/uninstall'
 // Liquidity service uses dedicated backend-{env} hosts. Dev and staging builds both use the staging
 // backend (consistent with the entry gateway + websocket URLs, which collapse dev → staging to avoid
 // localhost CORS); prod uses the prod backend. An explicit override always wins.
-const STAGING_LIQUIDITY_SERVICE_URL = 'https://liquidity.backend-staging.api.uniswap.org'
-const PROD_LIQUIDITY_SERVICE_URL = 'https://liquidity.backend-prod.api.uniswap.org'
+const STAGING_LIQUIDITY_SERVICE_URL = `https://liquidity.${STAGING_ENTRY_GATEWAY_HOST}`
+const PROD_LIQUIDITY_SERVICE_URL = `https://liquidity.${PROD_ENTRY_GATEWAY_HOST}`
 const EARN_HELP_ARTICLE = '46865818181901-Earn-on-Uniswap'
 
 export const UniswapHelpUrls = {
@@ -137,20 +139,20 @@ export const UniswapHelpUrls = {
 }
 
 export const UniswapStaticUrls = {
-  downloadWalletUrl: 'https://wallet.uniswap.org/',
+  downloadWalletUrl: 'https://meleh.us/',
   tradingApiDocsUrl: 'https://developers.uniswap.org/',
   tradingApiRoutingDocsUrl: 'https://developers.uniswap.org/docs/trading/swapping-api/amm-vs-uniswapx-routing',
   morphoDisclaimerUrl: 'https://morpho.org/disclaimers/',
   unichainUrl: 'https://www.unichain.org/',
   uniswapXUrl: 'https://x.uniswap.org/',
-  helpCenterUrl: 'https://help.uniswap.org/',
-  blogUrl: 'https://blog.uniswap.org/',
+  helpCenterUrl: 'https://support.meleh.us/',
+  blogUrl: 'https://meleh.us/blog',
   docsUrl: 'https://docs.uniswap.org/',
   voteUrl: 'https://vote.uniswapfoundation.org',
   governanceUrl: 'https://uniswap.org/governance',
   developersUrl: 'https://uniswap.org/developers',
-  aboutUrl: 'https://about.uniswap.org/',
-  careersUrl: 'https://careers.uniswap.org/',
+  aboutUrl: 'https://meleh.us/',
+  careersUrl: 'https://meleh.us/careers',
   social: {
     x: 'https://x.com/Uniswap',
     farcaster: 'https://farcaster.xyz/Uniswap',
@@ -158,9 +160,9 @@ export const UniswapStaticUrls = {
     tiktok: 'https://www.tiktok.com/@uniswap',
   },
   bugBountyUrl: 'https://cantina.xyz/bounties/f9df94db-c7b1-434b-bb06-d1360abdd1be',
-  termsOfServiceUrl: 'https://uniswap.org/terms-of-service',
-  privacyPolicyUrl: 'https://uniswap.org/privacy-policy',
-  chromeExtension: 'http://uniswap.org/ext',
+  termsOfServiceUrl: 'https://meleh.us/terms',
+  privacyPolicyUrl: 'https://meleh.us/privacy',
+  chromeExtension: 'https://meleh.us/extension',
   chromeExtensionUninstallUrl: `${UNISWAP_WEB_URL}${CHROME_EXTENSION_UNINSTALL_URL_PATH}`,
 
   // Download links
@@ -168,7 +170,7 @@ export const UniswapStaticUrls = {
   playStoreDownloadUrl: 'https://play.google.com/store/apps/details?id=com.uniswap.mobile&pcampaignid=web_share',
 
   // Core API Urls
-  apiOrigin: 'https://api.uniswap.org',
+  apiOrigin: 'https://api.meleh.us',
 
   // Merkl Docs for LP Incentives
   merklDocsUrl: 'https://docs.merkl.xyz/earn-with-merkl/faq-earn#how-are-aprs-calculated',
@@ -184,8 +186,8 @@ export const UniswapStaticUrls = {
   wormholeUrl: 'https://portalbridge.com/',
 
   // App and Redirect URL's
-  appBaseUrl: 'https://uniswap.org/app',
-  redirectUrlBase: 'https://uniswap.org/mobile-redirect',
+  appBaseUrl: 'https://meleh.us/app',
+  redirectUrlBase: 'https://meleh.us/mobile-redirect',
   requestOriginUrl: UNISWAP_WEB_URL,
 
   // Web Interface Urls

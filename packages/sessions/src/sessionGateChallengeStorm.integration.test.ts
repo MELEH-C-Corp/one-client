@@ -138,7 +138,7 @@ async function pollStuckSession(polls: number): Promise<{ initCycles: number; ch
     clock += QUOTE_POLL_CADENCE_MS
     // The first poll's establish rejects (init throws); later polls succeed (200). We are
     // counting init cycles, so swallow the transient rejection.
-    await chain.gatedQuoteFetch('https://interface.gateway.uniswap.org/v2/quote').catch(() => undefined)
+    await chain.gatedQuoteFetch('https://interface.gateway.meleh.us/v2/quote').catch(() => undefined)
   }
   return { initCycles: chain.initCycles(), challenges: chain.challenges() }
 }

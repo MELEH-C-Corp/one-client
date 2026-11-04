@@ -15,7 +15,7 @@ import { Mocks } from '~/playwright/mocks/mocks'
 
 const test = getTest({ withAnvil: true })
 
-const UNISWAP_X_ORDERS_ENDPOINT = `https://interface.gateway.uniswap.org/v2/orders?swapper=${TEST_WALLET_ADDRESS}&orderHashes=${ZERO_ADDRESS}`
+const UNISWAP_X_ORDERS_ENDPOINT = `https://interface.gateway.meleh.us/v2/orders?swapper=${TEST_WALLET_ADDRESS}&orderHashes=${ZERO_ADDRESS}`
 
 test.describe(
   'UniswapX',

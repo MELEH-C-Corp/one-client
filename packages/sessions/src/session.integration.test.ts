@@ -32,7 +32,7 @@ function createMockPerformanceTracker(): PerformanceTracker {
   }
 }
 
-const BACKEND_URL = 'https://entry-gateway.backend-staging.api.uniswap.org'
+const BACKEND_URL = 'https://api-staging.meleh.us'
 // const BACKEND_URL = 'http://localhost:3000'
 
 // =============================================================================

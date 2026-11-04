@@ -279,11 +279,11 @@ test.describe(
         await expect(page.getByTestId(TestID.HelpModal).getByText('Contact us')).toBeVisible()
 
         await expect(
-          page.getByTestId(TestID.HelpModal).locator('a[href="https://support.uniswap.org/hc/en-us"]'),
+          page.getByTestId(TestID.HelpModal).locator('a[href="https://support.meleh.us/hc/en-us"]'),
         ).toBeVisible()
         await expect(page.getByTestId(TestID.HelpModal).locator('a[href="https://docs.uniswap.org/"]')).toBeVisible()
         await expect(
-          page.getByTestId(TestID.HelpModal).locator('a[href="https://support.uniswap.org/hc/en-us/requests/new"]'),
+          page.getByTestId(TestID.HelpModal).locator('a[href="https://support.meleh.us/hc/en-us/requests/new"]'),
         ).toBeVisible()
       })
 

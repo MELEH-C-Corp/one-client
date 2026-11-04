@@ -27,7 +27,7 @@ import type {
 // TODO(entry-gateway-urls): duplicated from the canonical definition in
 // packages/api/src/clients/base/entryGatewayUrls.ts — @universe/api depends on
 // @universe/sessions, so importing it here would create a package cycle. Keep in sync.
-const DEFAULT_BACKEND_URL = 'https://entry-gateway.backend-staging.api.uniswap.org'
+const DEFAULT_BACKEND_URL = 'https://api-staging.meleh.us'
 
 const PLATFORM_TO_REQUEST_SOURCE = {
   web: 'uniswap-web',

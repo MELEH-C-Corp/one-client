@@ -84,24 +84,24 @@ describe('urls', () => {
     describe('DataApi', () => {
       it.each([
         // Web
-        { expectedUrl: 'https://entry-gateway.backend-staging.api.uniswap.org', env: envConfigs.webDev },
-        { expectedUrl: 'https://interface.gateway.uniswap.org', env: envConfigs.webBeta },
-        { expectedUrl: 'https://interface.gateway.uniswap.org', env: envConfigs.webProd },
+        { expectedUrl: 'https://api-staging.meleh.us', env: envConfigs.webDev },
+        { expectedUrl: 'https://interface.gateway.meleh.us', env: envConfigs.webBeta },
+        { expectedUrl: 'https://interface.gateway.meleh.us', env: envConfigs.webProd },
         // Mobile iOS
-        { expectedUrl: 'https://entry-gateway.backend-staging.api.uniswap.org', env: envConfigs.mobileIosDev },
-        { expectedUrl: 'https://ios.wallet.gateway.uniswap.org', env: envConfigs.mobileIosBeta },
-        { expectedUrl: 'https://ios.wallet.gateway.uniswap.org', env: envConfigs.mobileIosProd },
+        { expectedUrl: 'https://api-staging.meleh.us', env: envConfigs.mobileIosDev },
+        { expectedUrl: 'https://ios.wallet.gateway.meleh.us', env: envConfigs.mobileIosBeta },
+        { expectedUrl: 'https://ios.wallet.gateway.meleh.us', env: envConfigs.mobileIosProd },
         // Mobile Android
-        { expectedUrl: 'https://entry-gateway.backend-staging.api.uniswap.org', env: envConfigs.mobileAndroidDev },
-        { expectedUrl: 'https://android.wallet.gateway.uniswap.org', env: envConfigs.mobileAndroidBeta },
-        { expectedUrl: 'https://android.wallet.gateway.uniswap.org', env: envConfigs.mobileAndroidProd },
+        { expectedUrl: 'https://api-staging.meleh.us', env: envConfigs.mobileAndroidDev },
+        { expectedUrl: 'https://android.wallet.gateway.meleh.us', env: envConfigs.mobileAndroidBeta },
+        { expectedUrl: 'https://android.wallet.gateway.meleh.us', env: envConfigs.mobileAndroidProd },
         // Extension
-        { expectedUrl: 'https://entry-gateway.backend-staging.api.uniswap.org', env: envConfigs.extensionDev },
-        { expectedUrl: 'https://extension.gateway.uniswap.org', env: envConfigs.extensionBeta },
-        { expectedUrl: 'https://extension.gateway.uniswap.org', env: envConfigs.extensionProd },
+        { expectedUrl: 'https://api-staging.meleh.us', env: envConfigs.extensionDev },
+        { expectedUrl: 'https://extension.gateway.meleh.us', env: envConfigs.extensionBeta },
+        { expectedUrl: 'https://extension.gateway.meleh.us', env: envConfigs.extensionProd },
         // Playwright
-        { expectedUrl: 'https://interface.gateway.uniswap.org', env: envConfigs.playwrightDev },
-        { expectedUrl: 'https://interface.gateway.uniswap.org', env: envConfigs.playwrightProd },
+        { expectedUrl: 'https://interface.gateway.meleh.us', env: envConfigs.playwrightDev },
+        { expectedUrl: 'https://interface.gateway.meleh.us', env: envConfigs.playwrightProd },
       ])('generates correct URL for $env', async ({ expectedUrl, env }) => {
         mockEnvironmentAndPlatform(env)
         const { getCloudflareApiBaseUrl } = await import('./urls')
@@ -113,24 +113,24 @@ describe('urls', () => {
   describe('Default Flow', () => {
     it.each([
       // Web
-      { expectedUrl: 'https://interface.gateway.uniswap.org', env: envConfigs.webDev },
-      { expectedUrl: 'https://interface.gateway.uniswap.org', env: envConfigs.webBeta },
-      { expectedUrl: 'https://interface.gateway.uniswap.org', env: envConfigs.webProd },
+      { expectedUrl: 'https://interface.gateway.meleh.us', env: envConfigs.webDev },
+      { expectedUrl: 'https://interface.gateway.meleh.us', env: envConfigs.webBeta },
+      { expectedUrl: 'https://interface.gateway.meleh.us', env: envConfigs.webProd },
       // Mobile iOS
-      { expectedUrl: 'https://ios.wallet.gateway.uniswap.org', env: envConfigs.mobileIosDev },
-      { expectedUrl: 'https://ios.wallet.gateway.uniswap.org', env: envConfigs.mobileIosBeta },
-      { expectedUrl: 'https://ios.wallet.gateway.uniswap.org', env: envConfigs.mobileIosProd },
+      { expectedUrl: 'https://ios.wallet.gateway.meleh.us', env: envConfigs.mobileIosDev },
+      { expectedUrl: 'https://ios.wallet.gateway.meleh.us', env: envConfigs.mobileIosBeta },
+      { expectedUrl: 'https://ios.wallet.gateway.meleh.us', env: envConfigs.mobileIosProd },
       // Mobile Android
-      { expectedUrl: 'https://android.wallet.gateway.uniswap.org', env: envConfigs.mobileAndroidDev },
-      { expectedUrl: 'https://android.wallet.gateway.uniswap.org', env: envConfigs.mobileAndroidBeta },
-      { expectedUrl: 'https://android.wallet.gateway.uniswap.org', env: envConfigs.mobileAndroidProd },
+      { expectedUrl: 'https://android.wallet.gateway.meleh.us', env: envConfigs.mobileAndroidDev },
+      { expectedUrl: 'https://android.wallet.gateway.meleh.us', env: envConfigs.mobileAndroidBeta },
+      { expectedUrl: 'https://android.wallet.gateway.meleh.us', env: envConfigs.mobileAndroidProd },
       // Extension
-      { expectedUrl: 'https://extension.gateway.uniswap.org', env: envConfigs.extensionDev },
-      { expectedUrl: 'https://extension.gateway.uniswap.org', env: envConfigs.extensionBeta },
-      { expectedUrl: 'https://extension.gateway.uniswap.org', env: envConfigs.extensionProd },
+      { expectedUrl: 'https://extension.gateway.meleh.us', env: envConfigs.extensionDev },
+      { expectedUrl: 'https://extension.gateway.meleh.us', env: envConfigs.extensionBeta },
+      { expectedUrl: 'https://extension.gateway.meleh.us', env: envConfigs.extensionProd },
       // Playwright
-      { expectedUrl: 'https://interface.gateway.uniswap.org', env: envConfigs.playwrightDev },
-      { expectedUrl: 'https://interface.gateway.uniswap.org', env: envConfigs.playwrightProd },
+      { expectedUrl: 'https://interface.gateway.meleh.us', env: envConfigs.playwrightDev },
+      { expectedUrl: 'https://interface.gateway.meleh.us', env: envConfigs.playwrightProd },
     ])('generates correct URL for $env', async ({ expectedUrl, env }) => {
       mockEnvironmentAndPlatform(env)
       const { getCloudflareApiBaseUrl } = await import('./urls')
@@ -168,7 +168,7 @@ describe('urls', () => {
     const { getCloudflareApiBaseUrl } = await import('./urls')
     const result = getCloudflareApiBaseUrl({ flow: TrafficFlows.GraphQL })
 
-    expect(result).toBe('https://graphql.interface.gateway.uniswap.org')
+    expect(result).toBe('https://graphql.interface.gateway.meleh.us')
   })
 
   describe('createHelpArticleUrl', () => {
@@ -176,7 +176,7 @@ describe('urls', () => {
       mockEnvironmentAndPlatform(envConfigs.webProd)
       const { createHelpArticleUrl } = await import('./urls')
       expect(createHelpArticleUrl('46569604134157-Launching-a-Continuous-Clearing-Auction')).toBe(
-        'https://support.uniswap.org/hc/en-us/articles/46569604134157-Launching-a-Continuous-Clearing-Auction?product_link=web',
+        'https://support.meleh.us/hc/en-us/articles/46569604134157-Launching-a-Continuous-Clearing-Auction?product_link=web',
       )
     })
 
@@ -188,7 +188,7 @@ describe('urls', () => {
           section: 'set-your-auction-details',
         }),
       ).toBe(
-        'https://support.uniswap.org/hc/en-us/articles/46569604134157-Launching-a-Continuous-Clearing-Auction?product_link=web#set-your-auction-details',
+        'https://support.meleh.us/hc/en-us/articles/46569604134157-Launching-a-Continuous-Clearing-Auction?product_link=web#set-your-auction-details',
       )
     })
 
@@ -200,7 +200,7 @@ describe('urls', () => {
           section: 'configure-the-liquidity-pool-your-auction-will-seed-into-at-the-end',
         }),
       ).toBe(
-        'https://support.uniswap.org/hc/en-us/articles/123?product_link=mobileApp#configure-the-liquidity-pool-your-auction-will-seed-into-at-the-end',
+        'https://support.meleh.us/hc/en-us/articles/123?product_link=mobileApp#configure-the-liquidity-pool-your-auction-will-seed-into-at-the-end',
       )
     })
   })

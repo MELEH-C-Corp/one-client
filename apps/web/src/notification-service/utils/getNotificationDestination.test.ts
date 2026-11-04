@@ -53,16 +53,16 @@ describe('getNotificationDestination', () => {
     expect(getNotificationDestination(notification)).toBe('/positions')
   })
 
-  it('resolves an absolute app.uniswap.org URL even when the current origin differs', () => {
-    expect(window.location.origin).not.toBe('https://app.uniswap.org')
+  it('resolves an absolute app.meleh.us URL even when the current origin differs', () => {
+    expect(window.location.origin).not.toBe('https://app.meleh.us')
 
-    const notification = createNotification({ backgroundLink: externalLink('https://app.uniswap.org/swap') })
+    const notification = createNotification({ backgroundLink: externalLink('https://app.meleh.us/swap') })
 
     expect(getNotificationDestination(notification)).toBe('/swap')
   })
 
   it('returns undefined for a genuinely external URL', () => {
-    const notification = createNotification({ backgroundLink: externalLink('https://support.uniswap.org/articles/1') })
+    const notification = createNotification({ backgroundLink: externalLink('https://support.meleh.us/articles/1') })
 
     expect(getNotificationDestination(notification)).toBeUndefined()
   })
@@ -122,7 +122,7 @@ describe('getNotificationDestination', () => {
     const notification = createNotification({
       buttonLinks: [
         { onClick: [OnClickAction.DISMISS] },
-        externalLink('https://support.uniswap.org/articles/1'),
+        externalLink('https://support.meleh.us/articles/1'),
         externalLink('/positions/create'),
       ],
     })
@@ -142,22 +142,22 @@ describe('getNotificationDestination', () => {
   it('falls back to the background when no button carries an in-app link', () => {
     const notification = createNotification({
       backgroundLink: externalLink('/explore'),
-      buttonLinks: [{ onClick: [OnClickAction.DISMISS] }, externalLink('https://support.uniswap.org/articles/1')],
+      buttonLinks: [{ onClick: [OnClickAction.DISMISS] }, externalLink('https://support.meleh.us/articles/1')],
     })
 
     expect(getNotificationDestination(notification)).toBe('/explore')
   })
 
   it('keeps a doubled slash on the path instead of reading it as a host', () => {
-    // `app.uniswap.org//explore` has the pathname `//explore`, which resolved against the origin
+    // `app.meleh.us//explore` has the pathname `//explore`, which resolved against the origin
     // would collapse to `/` and suppress on the landing page.
-    const notification = createNotification({ backgroundLink: externalLink('https://app.uniswap.org//explore') })
+    const notification = createNotification({ backgroundLink: externalLink('https://app.meleh.us//explore') })
 
     expect(getNotificationDestination(notification)).toBe('//explore')
   })
 
   it('handles a bare doubled slash without throwing', () => {
-    const notification = createNotification({ backgroundLink: externalLink('https://app.uniswap.org//') })
+    const notification = createNotification({ backgroundLink: externalLink('https://app.meleh.us//') })
 
     expect(getNotificationDestination(notification)).toBe('/')
   })

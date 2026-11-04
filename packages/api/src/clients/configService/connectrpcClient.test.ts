@@ -210,7 +210,7 @@ describe('rpcConnectCode', () => {
  * the code as a snake_case string — reproduced against `@connectrpc/connect@1.4.0`
  * as `{"code":"not_found","message":"NotFound: …"}`. The gateway's own 404 for a
  * path it doesn't route was captured live from
- * `entry-gateway.backend-dev.api.uniswap.org`: also JSON, also a 404, but with no
+ * `api-dev.meleh.us`: also JSON, also a 404, but with no
  * `code`. Absence and an undeployed service are separated by that field alone.
  */
 describe('isRpcNotFound', () => {

@@ -120,59 +120,16 @@ describe('hexadecimalStringToInt', () => {
 })
 
 describe('getEnabledChains', () => {
-  it('returns all mainnet chains', () => {
+  it('returns only the MELEH ONE mainnet chains', () => {
     expect(
       getEnabledChains({ appId: AppId.Web, isTestnetModeEnabled: false, featureFlaggedChainIds: ALL_CHAIN_IDS }),
     ).toEqual({
-      chains: [
-        UniverseChainId.Mainnet,
-        UniverseChainId.Unichain,
-        UniverseChainId.Monad,
-        UniverseChainId.Solana,
-        UniverseChainId.Polygon,
-        UniverseChainId.ArbitrumOne,
-        UniverseChainId.Optimism,
-        UniverseChainId.Base,
-        UniverseChainId.Bnb,
-        UniverseChainId.Blast,
-        UniverseChainId.Avalanche,
-        UniverseChainId.Celo,
-        UniverseChainId.WorldChain,
-        UniverseChainId.Linea,
-        UniverseChainId.MegaETH,
-        UniverseChainId.Robinhood,
-        UniverseChainId.Arc,
-        UniverseChainId.Ink,
-        UniverseChainId.Soneium,
-        UniverseChainId.Tempo,
-        UniverseChainId.XLayer,
-        UniverseChainId.Zora,
-        UniverseChainId.Zksync,
-      ],
+      chains: [UniverseChainId.Mainnet, UniverseChainId.Unichain, UniverseChainId.ArbitrumOne, UniverseChainId.Base],
       gqlChains: [
         GraphQLApi.Chain.Ethereum,
         GraphQLApi.Chain.Unichain,
-        GraphQLApi.Chain.Monad,
-        GraphQLApi.Chain.Solana,
-        GraphQLApi.Chain.Polygon,
         GraphQLApi.Chain.Arbitrum,
-        GraphQLApi.Chain.Optimism,
         GraphQLApi.Chain.Base,
-        GraphQLApi.Chain.Bnb,
-        GraphQLApi.Chain.Blast,
-        GraphQLApi.Chain.Avalanche,
-        GraphQLApi.Chain.Celo,
-        GraphQLApi.Chain.Worldchain,
-        GraphQLApi.Chain.Linea,
-        GraphQLApi.Chain.Megaeth,
-        GraphQLApi.Chain.Robinhood,
-        GraphQLApi.Chain.Arc,
-        GraphQLApi.Chain.Ink,
-        GraphQLApi.Chain.Soneium,
-        GraphQLApi.Chain.Tempo,
-        GraphQLApi.Chain.Xlayer,
-        GraphQLApi.Chain.Zora,
-        GraphQLApi.Chain.Zksync,
       ],
       defaultChainId: UniverseChainId.Mainnet,
       isTestnetModeEnabled: false,
@@ -184,14 +141,24 @@ describe('getEnabledChains', () => {
       getEnabledChains({
         appId: AppId.Web,
         isTestnetModeEnabled: false,
-        featureFlaggedChainIds: [UniverseChainId.Mainnet, UniverseChainId.Polygon],
+        featureFlaggedChainIds: [UniverseChainId.Mainnet, UniverseChainId.Base],
       }),
     ).toEqual({
-      chains: [UniverseChainId.Mainnet, UniverseChainId.Polygon],
-      gqlChains: [GraphQLApi.Chain.Ethereum, GraphQLApi.Chain.Polygon],
+      chains: [UniverseChainId.Mainnet, UniverseChainId.Base],
+      gqlChains: [GraphQLApi.Chain.Ethereum, GraphQLApi.Chain.Base],
       defaultChainId: UniverseChainId.Mainnet,
       isTestnetModeEnabled: false,
     })
+  })
+
+  it('drops feature flagged chains outside the MELEH ONE allowlist', () => {
+    expect(
+      getEnabledChains({
+        appId: AppId.Web,
+        isTestnetModeEnabled: false,
+        featureFlaggedChainIds: [UniverseChainId.Mainnet, UniverseChainId.Polygon, UniverseChainId.Solana],
+      }).chains,
+    ).toEqual([UniverseChainId.Mainnet])
   })
 
   it('returns testnet chains', () => {

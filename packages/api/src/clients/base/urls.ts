@@ -1,6 +1,7 @@
 import {
   DEV_ENTRY_GATEWAY_API_BASE_URL,
   DEV_ENTRY_GATEWAY_HOST,
+  MELEH_GATEWAY_ROOT_DOMAIN,
   PROD_ENTRY_GATEWAY_API_BASE_URL,
   PROD_ENTRY_GATEWAY_HOST,
   STAGING_ENTRY_GATEWAY_API_BASE_URL,
@@ -28,7 +29,7 @@ export enum TrafficFlows {
   DataApi = 'data-api',
 }
 
-export const helpUrl = 'https://support.uniswap.org/hc/en-us'
+export const helpUrl = 'https://support.meleh.us/hc/en-us'
 
 const FLOWS_USING_BETA = [TrafficFlows.FOR]
 
@@ -77,9 +78,9 @@ export function getCloudflareApiBaseUrl(params?: { flow?: TrafficFlows; postfix?
   if (flow === TrafficFlows.DataApi && isDevEnv() && !isE2eTestEnv()) {
     return STAGING_ENTRY_GATEWAY_API_BASE_URL
   } else if (flow === TrafficFlows.DataApi) {
-    baseUrl = `https://${getCloudflarePrefix(flow)}.gateway.uniswap.org`
+    baseUrl = `https://${getCloudflarePrefix(flow)}.${MELEH_GATEWAY_ROOT_DOMAIN}`
   } else {
-    baseUrl = `https://${getServicePrefix(flow)}${getCloudflarePrefix(flow)}.gateway.uniswap.org`
+    baseUrl = `https://${getServicePrefix(flow)}${getCloudflarePrefix(flow)}.${MELEH_GATEWAY_ROOT_DOMAIN}`
   }
   if (postfix) {
     baseUrl += `/${postfix}`
@@ -99,6 +100,8 @@ export function createHelpArticleUrl(resourceId: string, options?: { path?: stri
 export {
   DEV_ENTRY_GATEWAY_API_BASE_URL,
   DEV_ENTRY_GATEWAY_HOST,
+  MELEH_GATEWAY_ROOT_DOMAIN,
+  MELEH_ROOT_DOMAIN,
   PROD_ENTRY_GATEWAY_API_BASE_URL,
   PROD_ENTRY_GATEWAY_HOST,
   STAGING_ENTRY_GATEWAY_API_BASE_URL,

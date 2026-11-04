@@ -5,7 +5,7 @@
 // names the config accepts. If the SSR build ever resolves env at runtime instead, the key must be
 // present in that runtime env. Absent a key, the backend rejects the read and `liquidityServicePost`
 // returns undefined, degrading the OG surface to the default meta tags rather than erroring.
-const PROD_LIQUIDITY_BASE_URL = 'https://liquidity.backend-prod.api.uniswap.org'
+const PROD_LIQUIDITY_BASE_URL = 'https://liquidity.api.meleh.us'
 const TRADING_API_KEY = process.env.TRADING_API_KEY ?? process.env.REACT_APP_TRADING_API_KEY
 
 // Overridable so the cloud-function tests replay canned responses from the local fixture server,

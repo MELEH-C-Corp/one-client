@@ -138,7 +138,7 @@ export type Config = Omit<BaseConfig, keyof z.infer<typeof webConfigSchema> & st
  */
 export const webEnvFieldRules: EnvFieldRules<Config> = {
   [Environment.Production]: {
-    required: ['statsigApiKey', 'tradingApiKey', 'uniswapApiKey'],
+    // MELEH: Uniswap keys (Statsig, Trading, Uniswap API) live on the MELEH gateway, not in the bundle.
     forbidden: ['viteBackendUrl', 'debugProxy'],
   },
 }
