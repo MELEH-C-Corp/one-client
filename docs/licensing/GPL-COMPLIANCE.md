@@ -8,7 +8,7 @@ Working checklist for distributing the client. It is not legal advice; have coun
 |---|---|---|
 | Keep upstream copyright and license notices | `apps/web/LICENSE` and `apps/mobile/LICENSE` are unchanged; [NOTICE](../../NOTICE) credits Uniswap/interface | Done |
 | Mark modified files and say what changed | NOTICE summarizes changes; git history on `meleh/main` holds the details | Done |
-| Provide the corresponding source for every distributed build | Public repo `dark-developer-lord/meleh-one-client`, branch `meleh/main` | **Blocked: branch not pushed yet** |
+| Provide the corresponding source for every distributed build | Public repo `MELEH-C-Corp/one-client`, branch `meleh/main` | Done (tag each release) |
 | Tell users where to get the source | Link to the repo from Settings → About (web, mobile, extension) and app store descriptions | Not started |
 | License the whole derivative under GPL-3.0 | Client stays GPL; the private backend (`platform/`) must never import client code | Ongoing rule |
 | App stores | Apple's App Store terms add restrictions the GPL does not allow. Keep the source public and ship an install route outside the store; get counsel's view before the iOS release | Needs legal review |
