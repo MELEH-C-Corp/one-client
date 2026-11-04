@@ -31,36 +31,9 @@
 @import "@universe/mycelium/text-compat.css";
 @import "@universe/mycelium/shimmer.css";
 @import "@universe/mycelium/button-compat.css";
-/* Licensed "Basel Grotesk" faces (weights 485/535) — the family the shared base
- * layer and font-basel utilities resolve to. */
+/* Inter (variable, every weight) and Grenze Gotisch faces. Inter is the family the shared
+ * base layer, the font-basel utilities and Tamagui text (ui/src/theme/fonts.ts) all request. */
 @import "@universe/tailwind/fonts";
-
-/*
- * Tamagui text (ui/src/theme/fonts.ts, web branch) requests family "Basel" at
- * weights 400/500. Alias it to the same licensed Basel Grotesk sources so
- * Tamagui renders the licensed font too. The previous "Basel" registration in
- * each entrypoint's index.html pointed at an unlicensed 2019 dev cut of the
- * font (broken vertical metrics, 159 missing glyphs).
- */
-@font-face {
-  font-family: "Basel";
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-  src:
-    url("@universe/tailwind/fonts/Basel-Grotesk-Book.woff2") format("woff2"),
-    url("@universe/tailwind/fonts/Basel-Grotesk-Book.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Basel";
-  font-weight: 500;
-  font-style: normal;
-  font-display: block;
-  src:
-    url("@universe/tailwind/fonts/Basel-Grotesk-Medium.woff2") format("woff2"),
-    url("@universe/tailwind/fonts/Basel-Grotesk-Medium.woff") format("woff");
-}
 
 /*
  * Chrome injects `body { font-family: <platform pref font>; font-size: 75%; }`

@@ -23,7 +23,6 @@ export function CompanyMenu() {
   const media = useMedia()
   const isMobileDrawer = useIsMobileDrawer()
   const areTabsVisible = useTabsVisible()
-  const isLargeScreen = !media.xxl
   const location = useLocation()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -53,11 +52,6 @@ export function CompanyMenu() {
             <Link to="/?intro=true" onClick={(e) => e.stopPropagation()} style={{ textDecoration: 'none' }}>
               <Flex row alignItems="center" gap="$gap4" data-testid={TestID.NavUniswapLogo}>
                 <NavIcon />
-                {isLargeScreen && (
-                  <Text variant="subheading1" color="$accent1" userSelect="none">
-                    MELEH ONE
-                  </Text>
-                )}
               </Flex>
             </Link>
           </Trace>

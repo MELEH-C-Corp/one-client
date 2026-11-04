@@ -15,7 +15,7 @@ React Native) compiles it.
 | `@import "@universe/tailwind/tailwind"` | Web (Vite) | Full bundle: `theme` + `variables` + `base` + `animations` |
 | `@import "@universe/tailwind/native"` | React Native (uniwind) | Shared palette + semantic aliases in uniwind's `@variant` theme format |
 | `@import "@universe/tailwind/theme"` | Any | Raw `@theme` palette only (no semantic/dark layer) |
-| `@import "@universe/tailwind/fonts"` | Web | Basel Grotesk `@font-face` declarations |
+| `@import "@universe/tailwind/fonts"` | Web | Inter and Grenze Gotisch `@font-face` declarations |
 | `@universe/tailwind/types` | Any | TypeScript token vocabulary (`TypographyClass`, `ColorToken`, …) |
 
 ### Web (Vite + `@tailwindcss/vite`)
@@ -52,7 +52,7 @@ css/theme.css        @theme palette — selector-free, 100% hex/rgba. Shared by 
 css/variables.css    Web semantic aliases + shadcn compat (:root/.dark + @theme inline).
 css/base.css         @custom-variant dark + @layer base resets (web).
 css/animations.css   @keyframes + state-driven classes (web only).
-css/fonts.css        Basel Grotesk @font-face (web; RN loads fonts natively).
+css/fonts.css        Inter + Grenze Gotisch @font-face (web; RN loads fonts natively).
 tailwind.css         Web bundle entry.
 native.css           React Native (uniwind) entry.
 ```

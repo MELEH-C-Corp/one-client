@@ -112,7 +112,7 @@ const HEADER_TAB_VARIANTS = {
 // text-decoration is spelled as BOTH arbitrary properties on purpose: cn.ts folds the curated
 // underline utilities and `[text-decoration:…]` into one classGroup, so only the `-line` spelling
 // keeps the two declarations independent (Tamagui emitted both). The font family rides
-// var(--stext-font-book) (the verbatim legacy Basel stack) rather than the fixture's quoted literal:
+// var(--stext-font-book) (the verbatim legacy UI font stack) rather than the fixture's quoted literal:
 // quotes in a class name become CSS-escaped quotes in the built selector, which breaks
 // check-client-build's at-rule parser for every rule after it.
 const HeaderTab = styled('h3', {

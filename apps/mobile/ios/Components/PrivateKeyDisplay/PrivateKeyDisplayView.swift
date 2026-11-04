@@ -59,7 +59,7 @@ struct PrivateKeyDisplay: View {
   @State private var buttonPadding: CGFloat = 20
   
   let rnEthersRS = RNEthersRS()
-  let interFont = UIFont(name: "BaselGrotesk-Medium", size: 14)
+  let interFont = UIFont(name: "Inter-Medium", size: 14)
   
   func setAddress(address: String) {
     props.address = address

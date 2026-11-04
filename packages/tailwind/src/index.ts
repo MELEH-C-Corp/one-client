@@ -3,7 +3,7 @@
 // CSS entrypoints are consumed via subpath imports, not this barrel:
 //   @import "@universe/tailwind/tailwind"  → web bundle (theme + variables + base + animations)
 //   @import "@universe/tailwind/native"    → React Native (uniwind) tokens
-//   @import "@universe/tailwind/fonts"     → Basel Grotesk @font-face (web)
+//   @import "@universe/tailwind/fonts"     → Inter + Grenze Gotisch @font-face (web)
 //
 // This barrel exports the platform-agnostic token *type* vocabulary and the
 // TS value mirror of the CSS custom properties (./tokens).

@@ -101,7 +101,7 @@ const SPINNER_DURATION_MS = 1000
  * `--sbtn-font-button` (./button-compat.css) is imported by neither
  * apps/mobile/src/global.css nor @universe/mycelium/fonts, so native needs this.
  */
-const FONT_FAMILY_BUTTON = Platform.select({ android: 'Basel-Grotesk-Medium', default: 'Basel Grotesk' })
+const FONT_FAMILY_BUTTON = Platform.select({ android: 'Inter-Medium', default: 'Inter' })
 
 /** buttonFont weight: fonts.ts MEDIUM_WEIGHT (the web leg's `font-medium`). */
 const FONT_WEIGHT_BUTTON = '500'

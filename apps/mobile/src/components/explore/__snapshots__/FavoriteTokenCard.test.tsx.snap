@@ -39,7 +39,7 @@ exports[`FavoriteTokenCard > renders without error 1`] = `
             <div
               class="css-text-146c3p1"
               dir="auto"
-              style="font-size: 19px; line-height: 24px; font-family: Basel Grotesk; font-weight: 400;"
+              style="font-size: 19px; line-height: 24px; font-family: Inter; font-weight: 400;"
             />
           </div>
         </div>

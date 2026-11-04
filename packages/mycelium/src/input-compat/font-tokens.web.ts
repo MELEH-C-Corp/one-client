@@ -10,7 +10,7 @@ import { fonts } from '../tokens'
 
 // The exact web stacks the legacy cascade emitted as inline font-family values.
 const BASEL_STACK =
-  'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  'Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
 const MONOSPACE_STACK =
   'ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Courier New", monospace'
 

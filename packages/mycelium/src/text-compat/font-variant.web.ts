@@ -1,7 +1,7 @@
 /**
  * Web leg of the platform split — identical to the platformless base (see its
  * header): `getFontStylesForVariant` resolves the legacy WEB column (the
- * generated `VARIANT_METRICS` mirror, the verbatim Basel stack, fonts-table
+ * generated `VARIANT_METRICS` mirror, the verbatim Inter stack, fonts-table
  * weights).
  *
  * Intentionally NOT the usual throwing platformless-base convention: the base

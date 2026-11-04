@@ -21,7 +21,7 @@ import * as base from './font-variant.ts'
 import * as web from './font-variant.web'
 
 const WEB_BASEL =
-  'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  'Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
 const WEB_MONO = 'InputMono-Regular'
 
 /**
@@ -91,7 +91,7 @@ describe('getFontStylesForVariant (native leg under the deterministic web-equiva
     expect(resolved.lineHeight).toBeCloseTo(webResolved.lineHeight, 10)
     expect(resolved.fontWeight).toBe(webResolved.fontWeight)
     expect(resolved.letterSpacing).toBe(webResolved.letterSpacing)
-    expect(resolved.family).toBe(token === '$monospace' ? 'InputMono-Regular' : 'Basel Grotesk')
+    expect(resolved.family).toBe(token === '$monospace' ? 'InputMono-Regular' : 'Inter')
   })
 })
 

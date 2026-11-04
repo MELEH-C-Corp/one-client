@@ -46,7 +46,7 @@ const RN_USER_SELECT: ReadonlySet<string> = new Set(['auto', 'text', 'none', 'co
 
 /**
  * RN's accepted literal `fontWeight` values. The app's 485/535 tokens are
- * deliberately excluded — those select a Basel font FILE instead of a literal
+ * deliberately excluded — those select an Inter font FILE instead of a literal
  * weight (INFRA-3461/INFRA-3453); their numeric spellings pass through via
  * `APP_NUMERIC_FONT_WEIGHTS` below.
  */
@@ -166,7 +166,7 @@ function applyFontMetrics({ props, style, dropped }: ApplyArgs): void {
     const raw = String(resolvedWeight)
     const token = lookupToken(FONT_WEIGHT_TOKEN, raw.startsWith('$') ? raw.slice(1) : raw)
     if (token !== undefined) {
-      // 485/535 tokens select the Basel FACE (INFRA-3453), like legacy
+      // 485/535 tokens select the Inter FACE (INFRA-3453), like legacy
       // Tamagui — anchored to the font context when no variant named one.
       weight = token === FONT_WEIGHT_TOKEN.medium ? NATIVE_MEDIUM_WEIGHT : NATIVE_BOOK_WEIGHT
       family ??= nativeFamilyForFontToken(fontToken)

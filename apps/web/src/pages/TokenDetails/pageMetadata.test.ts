@@ -11,7 +11,7 @@ describe('pages/TokenDetails/util', () => {
   describe('getTokenPageTitle', () => {
     it('should return the correct title when tokenName and tokenSymbol are undefined', () => {
       const result = getTokenPageTitle({ t: i18n.t, currency: new Token(1, ZERO_ADDRESS, 18) })
-      expect(result).toBe('Buy and sell on Uniswap')
+      expect(result).toBe('Buy and sell on MELEH ONE')
     })
 
     it('should return the correct title when only tokenName is defined', () => {
@@ -19,7 +19,7 @@ describe('pages/TokenDetails/util', () => {
         t: i18n.t,
         currency: new Token(1, ZERO_ADDRESS, 18, undefined, 'Baby Doge Token'),
       })
-      expect(result).toBe('Baby Doge Token: Buy and sell on Uniswap')
+      expect(result).toBe('Baby Doge Token: Buy and sell on MELEH ONE')
     })
 
     it('should return the correct title when only tokenSymbol is defined', () => {
@@ -27,7 +27,7 @@ describe('pages/TokenDetails/util', () => {
         t: i18n.t,
         currency: new Token(1, ZERO_ADDRESS, 18, 'BDT', undefined),
       })
-      expect(result).toBe('BDT: Buy and sell on Uniswap')
+      expect(result).toBe('BDT: Buy and sell on MELEH ONE')
     })
 
     it('should return the correct title when tokenName and tokenSymbol are defined', () => {
@@ -35,7 +35,7 @@ describe('pages/TokenDetails/util', () => {
         t: i18n.t,
         currency: new Token(1, ZERO_ADDRESS, 18, 'BDT', 'Baby Doge Token'),
       })
-      expect(result).toBe('Baby Doge Token (BDT): Buy and sell on Uniswap')
+      expect(result).toBe('Baby Doge Token (BDT): Buy and sell on MELEH ONE')
     })
   })
 

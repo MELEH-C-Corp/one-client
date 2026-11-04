@@ -127,7 +127,7 @@ export function optionClasses({
  * `<Text variant="buttonLabel3|4">` web metrics, byte-equal to what
  * TextCompat emits for the same variants (`VARIANT_METRICS` in
  * text-compat/theme-tokens.generated.ts: 14/16.1/535 large, 12/13.8/535
- * otherwise, Basel medium via the text-compat.css font stack vars), plus the
+ * otherwise, Inter medium via the text-compat.css font stack vars), plus the
  * legacy `userSelect: 'none'`. Static literals so Tailwind's scanner emits
  * them; the style-classes test pins them against the generated variant
  * table. The native leg renders the same ramp via inline metrics instead

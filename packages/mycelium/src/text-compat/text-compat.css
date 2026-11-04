@@ -16,10 +16,10 @@
 :root {
   /* Verbatim legacy web font stacks (theme/fonts.ts baselBook/baselMedium — identical on web — and monospaceFontFamily). */
   --stext-font-book:
-    Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
   --stext-font-medium:
-    Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
   --stext-font-mono:
     ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",

@@ -55,8 +55,8 @@ export function deriveThemeColorTokens(lightTheme: Record<string, string>): stri
 
 /**
  * Font stack per variant, from Text.tsx's variant definitions:
- * headings/subheadings/body use the heading/subHeading/body fonts (Basel book
- * stack), buttonLabel* uses the button font (Basel medium stack — same stack
+ * headings/subheadings/body use the heading/subHeading/body fonts (Inter book
+ * stack), buttonLabel* uses the button font (Inter medium stack — same stack
  * on web), monospace uses the monospace font.
  */
 function familyKey(variantName: string): FontFamilyKey {

@@ -3,9 +3,12 @@
 
 @theme {
   /* Font Families - these create font-* utilities */
-  /* Basel is ONE family ("Basel Grotesk", weights 485/535 via @font-face in fonts.css). */
+  /* The UI family is Inter (one variable family, weights 485/535 via @font-face in fonts.css).
+     The token keeps its upstream name `basel` so utilities and generated classes stay stable. */
   /* font-basel-book / font-basel-medium are composite utilities in base.css (family + weight). */
-  --font-basel: "Basel Grotesk", sans-serif;
+  --font-basel: "Inter", sans-serif;
+  /* Brand display face (Grenze Gotisch): wordmark and hero titles only. */
+  --font-brand: "Grenze Gotisch", "Inter", serif;
   --font-mono: "InputMono-Regular", monospace;
 
   /* Font Weights */
@@ -105,7 +108,7 @@
   --color-neutral3-hovered-dark: rgba(255, 255, 255, 0.58);
 
   /* Semantic Colors - Surfaces */
-  --color-surface1-light: #ffffff;
+  --color-surface1-light: #fdfdff;
   --color-surface1-dark: #131313;
   --color-surface1-hovered-light: #fcfcfc;
   --color-surface1-hovered-dark: #1a1a1a;
@@ -131,16 +134,16 @@
   --color-surface5-hovered-dark: rgba(0, 0, 0, 0.06);
 
   /* Semantic Colors - Accents */
-  --color-accent1-light: #0e9f6e;
-  --color-accent1-dark: #0e9f6e;
-  --color-accent1-hovered-light: #057a55;
-  --color-accent1-hovered-dark: #057a55;
-  --color-accent2-light: rgba(14, 159, 110, 0.08);
-  --color-accent2-dark: rgba(14, 159, 110, 0.08);
-  --color-accent2-hovered-light: rgba(14, 159, 110, 0.12);
-  --color-accent2-hovered-dark: rgba(14, 159, 110, 0.12);
-  --color-accent2-solid-light: #ecfdf5;
-  --color-accent2-solid-dark: #0F2A20;
+  --color-accent1-light: #f42902;
+  --color-accent1-dark: #f42902;
+  --color-accent1-hovered-light: #c92102;
+  --color-accent1-hovered-dark: #c92102;
+  --color-accent2-light: rgba(244, 41, 2, 0.08);
+  --color-accent2-dark: rgba(244, 41, 2, 0.08);
+  --color-accent2-hovered-light: rgba(244, 41, 2, 0.12);
+  --color-accent2-hovered-dark: rgba(244, 41, 2, 0.12);
+  --color-accent2-solid-light: #feece8;
+  --color-accent2-solid-dark: #2b0d06;
   /* Neutral-themed fills use neutral1 with surface1 labels (design decision: Zack Labadie + Philippe Cao, 2026-07-29 —
      no separate inverse value). accent3 is a deprecated alias of neutral1 kept for migration compat; values duplicated
      because the native pipeline and token parsers need literals — remove when legacy Tamagui accent3 is gone. */
@@ -152,14 +155,14 @@
   --color-accent4-light: #fef4ff;
 
   /* Status Colors */
-  --color-success-light: #0c8911;
-  --color-success-dark: #21c95e;
-  --color-success-hovered-light: #06742c;
-  --color-success-hovered-dark: #15863c;
-  --color-success-secondary-light: rgba(15, 194, 68, 0.06);
-  --color-success-secondary-dark: rgba(33, 201, 94, 0.12);
-  --color-success-secondary-hovered-light: rgba(15, 194, 68, 0.12);
-  --color-success-secondary-hovered-dark: #093a16;
+  --color-success-light: #168018;
+  --color-success-dark: #83fd80;
+  --color-success-hovered-light: #106212;
+  --color-success-hovered-dark: #6be868;
+  --color-success-secondary-light: rgba(131, 253, 128, 0.25);
+  --color-success-secondary-dark: rgba(131, 253, 128, 0.12);
+  --color-success-secondary-hovered-light: rgba(131, 253, 128, 0.4);
+  --color-success-secondary-hovered-dark: #123d13;
   --color-warning-light: #996f01;
   --color-warning-dark: #ffbf17;
   --color-warning-hovered-light: #7a5801;
@@ -168,14 +171,14 @@
   --color-warning-secondary-dark: rgba(255, 191, 23, 0.08);
   --color-warning-secondary-hovered-light: rgba(255, 191, 23, 0.1);
   --color-warning-secondary-hovered-dark: rgba(255, 191, 23, 0.16);
-  --color-critical-light: #e10f0f;
-  --color-critical-dark: #ff593c;
-  --color-critical-hovered-light: #bf0d0d;
-  --color-critical-hovered-dark: #ff401f;
-  --color-critical-secondary-light: rgba(255, 0, 0, 0.05);
-  --color-critical-secondary-dark: rgba(255, 89, 60, 0.12);
-  --color-critical-secondary-hovered-light: rgba(255, 0, 0, 0.1);
-  --color-critical-secondary-hovered-dark: rgba(255, 89, 60, 0.2);
+  --color-critical-light: #c8102e;
+  --color-critical-dark: #ff4d6a;
+  --color-critical-hovered-light: #a00d25;
+  --color-critical-hovered-dark: #ff2e52;
+  --color-critical-secondary-light: rgba(200, 16, 46, 0.06);
+  --color-critical-secondary-dark: rgba(255, 77, 106, 0.12);
+  --color-critical-secondary-hovered-light: rgba(200, 16, 46, 0.1);
+  --color-critical-secondary-hovered-dark: rgba(255, 77, 106, 0.2);
 
   /* Network Colors (mode-independent) */
   --color-network-ethereum: #627eea;

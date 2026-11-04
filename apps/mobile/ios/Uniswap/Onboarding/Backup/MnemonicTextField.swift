@@ -14,8 +14,8 @@ enum MnemonicInputStatus {
 }
 
 struct MnemonicTextField: View {
-  let smallFont = UIFont(name: "BaselGrotesk-Book", size: 14)
-  let mediumFont = UIFont(name: "BaselGrotesk-Book", size: 16)
+  let smallFont = UIFont(name: "Inter-Regular", size: 14)
+  let mediumFont = UIFont(name: "Inter-Regular", size: 16)
   
   var index: Int
   var word = ""

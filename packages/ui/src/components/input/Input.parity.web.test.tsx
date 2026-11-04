@@ -92,7 +92,7 @@ function readProp(el: Element, prop: string): string {
 function legacyDefaultFrame(theme: ThemeName): Record<string, string> {
   return {
     'font-family':
-      'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+      'Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     'font-weight': '535', // --f-weight-medium (web app)
     'font-size': '16px', // --f-size-medium
     'line-height': '22px', // --f-lineHeight-medium

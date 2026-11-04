@@ -28,7 +28,7 @@ CardHeader.displayName = 'CardHeader'
 
 const CardTitle = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    // Subheading/1 token, same treatment as DialogTitle: font-semibold (600) is not a Basel
+    // Subheading/1 token, same treatment as DialogTitle: font-semibold (600) is not an app
     // weight (485/535), so it was synthesising a bold. Card isn't in the Figma nodes that
     // were read — the shared Subheading/1 style is an assumption, see the PR body.
     <Flex

@@ -22,7 +22,7 @@ beforeAll(() => {
   writeClientFile('index.html', SPA_HTML)
   writeClientFile('assets/index-abc123.js', 'console.log("chunk")')
   writeClientFile('assets/index-abc123.js.map', '{}')
-  writeClientFile('fonts/Basel.woff2', 'woff2')
+  writeClientFile('fonts/InterVariable.woff2', 'woff2')
   writeClientFile('embed.html', '<html>embed</html>')
   writeClientFile('.well-known/apple-app-site-association', '{"applinks":{}}')
   writeClientFile('robots.txt', 'User-agent: *')

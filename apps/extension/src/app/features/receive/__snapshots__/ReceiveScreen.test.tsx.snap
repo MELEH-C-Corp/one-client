@@ -83,7 +83,7 @@ exports[`ReceiveScreen > renders without error 1`] = `
             </div>
             <div
               class="flex flex-col basis-auto box-border min-h-[0px] min-w-[0px] shrink-0 items-center justify-center bg-[color:var(--c-bg)] relative"
-              style="--c-bg: #FFFFFF;"
+              style="--c-bg: #FDFDFF;"
             >
               <div
                 height="240"
@@ -117,7 +117,7 @@ exports[`ReceiveScreen > renders without error 1`] = `
                 </div>
                 <div>
                   <div
-                    fill="#FFFFFF"
+                    fill="#FDFDFF"
                     height="256"
                     rx="24"
                     width="256"
@@ -5775,7 +5775,7 @@ exports[`ReceiveScreen > renders without error 1`] = `
                     >
                       <div
                         d="M0 0H40V40H0V0Z"
-                        fill="#FFFFFF"
+                        fill="#FDFDFF"
                       />
                     </div>
                   </div>
@@ -5826,7 +5826,7 @@ exports[`ReceiveScreen > renders without error 1`] = `
                     >
                       <div
                         d="M0 0H40V40H0V0Z"
-                        fill="#FFFFFF"
+                        fill="#FDFDFF"
                       />
                     </div>
                   </div>
@@ -5877,7 +5877,7 @@ exports[`ReceiveScreen > renders without error 1`] = `
                     >
                       <div
                         d="M0 0H40V40H0V0Z"
-                        fill="#FFFFFF"
+                        fill="#FDFDFF"
                       />
                     </div>
                   </div>
@@ -6158,7 +6158,7 @@ exports[`ReceiveScreen > renders without error 1`] = `
           </div>
           <div
             class="flex flex-col basis-auto box-border min-h-[0px] min-w-[0px] shrink-0 items-center justify-center bg-[color:var(--c-bg)] relative"
-            style="--c-bg: #FFFFFF;"
+            style="--c-bg: #FDFDFF;"
           >
             <div
               height="240"
@@ -6192,7 +6192,7 @@ exports[`ReceiveScreen > renders without error 1`] = `
               </div>
               <div>
                 <div
-                  fill="#FFFFFF"
+                  fill="#FDFDFF"
                   height="256"
                   rx="24"
                   width="256"
@@ -11850,7 +11850,7 @@ exports[`ReceiveScreen > renders without error 1`] = `
                   >
                     <div
                       d="M0 0H40V40H0V0Z"
-                      fill="#FFFFFF"
+                      fill="#FDFDFF"
                     />
                   </div>
                 </div>
@@ -11901,7 +11901,7 @@ exports[`ReceiveScreen > renders without error 1`] = `
                   >
                     <div
                       d="M0 0H40V40H0V0Z"
-                      fill="#FFFFFF"
+                      fill="#FDFDFF"
                     />
                   </div>
                 </div>
@@ -11952,7 +11952,7 @@ exports[`ReceiveScreen > renders without error 1`] = `
                   >
                     <div
                       d="M0 0H40V40H0V0Z"
-                      fill="#FFFFFF"
+                      fill="#FDFDFF"
                     />
                   </div>
                 </div>

@@ -26,7 +26,7 @@ exports[`TokenItem > renders without error 1`] = `
             <div
               class="css-text-146c3p1"
               dir="auto"
-              style="font-size: 15px; line-height: 18px; font-family: Basel Grotesk; font-weight: 400;"
+              style="font-size: 15px; line-height: 18px; font-family: Inter; font-weight: 400;"
             >
               1
             </div>
@@ -63,7 +63,7 @@ exports[`TokenItem > renders without error 1`] = `
               <div
                 class="css-view-175oi2r"
                 data-testid="network-logo-1"
-                style="overflow-x: hidden; overflow-y: hidden; z-index: 10; width: 20px; height: 20px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-color: rgba(255,255,255,1.00); border-right-color: rgba(255,255,255,1.00); border-bottom-color: rgba(255,255,255,1.00); border-left-color: rgba(255,255,255,1.00);"
+                style="overflow-x: hidden; overflow-y: hidden; z-index: 10; width: 20px; height: 20px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-color: rgba(253,253,255,1.00); border-right-color: rgba(253,253,255,1.00); border-bottom-color: rgba(253,253,255,1.00); border-left-color: rgba(253,253,255,1.00);"
               >
                 <div
                   class="css-view-175oi2r r-flexBasis-1mlwlqe r-overflow-1udh08x r-zIndex-417010"
@@ -91,7 +91,7 @@ exports[`TokenItem > renders without error 1`] = `
           <div
             class="css-text-146c3p1 r-maxWidth-dnmrzs r-overflow-1udh08x r-textOverflow-1udbk01 r-whiteSpace-3s2u2q r-wordWrap-1iln25a"
             dir="auto"
-            style="font-size: 19px; line-height: 24px; font-family: Basel Grotesk; font-weight: 400;"
+            style="font-size: 19px; line-height: 24px; font-family: Inter; font-weight: 400;"
           >
             tkn
           </div>
@@ -99,7 +99,7 @@ exports[`TokenItem > renders without error 1`] = `
             class="css-text-146c3p1 r-maxWidth-dnmrzs r-overflow-1udh08x r-textOverflow-1udbk01 r-whiteSpace-3s2u2q r-wordWrap-1iln25a"
             data-testid="token-item/metadata-subtitle"
             dir="auto"
-            style="font-size: 17px; line-height: 20px; font-family: Basel Grotesk; font-weight: 400;"
+            style="font-size: 17px; line-height: 20px; font-family: Inter; font-weight: 400;"
           />
         </div>
         <div
@@ -129,7 +129,7 @@ exports[`TokenItem > renders without error 1`] = `
                       <div
                         class="css-text-146c3p1"
                         dir="auto"
-                        style="font-size: 19px; font-weight: 400; line-height: 24px; top: 1px; height: 24px; font-family: Basel Grotesk; color: rgb(19, 19, 19);"
+                        style="font-size: 19px; font-weight: 400; line-height: 24px; top: 1px; height: 24px; font-family: Inter; color: rgb(19, 19, 19);"
                       >
                         -
                       </div>
@@ -154,7 +154,7 @@ exports[`TokenItem > renders without error 1`] = `
                     class="css-text-146c3p1"
                     data-testid="portfolio-relative-change"
                     dir="auto"
-                    style="font-size: 17px; line-height: 22px; font-family: Basel Grotesk; font-weight: 400;"
+                    style="font-size: 17px; line-height: 22px; font-family: Inter; font-weight: 400;"
                   >
                     -
                   </div>

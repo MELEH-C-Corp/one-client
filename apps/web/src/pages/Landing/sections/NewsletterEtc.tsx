@@ -109,7 +109,7 @@ function UniverseRow({
 // (later object key), so the inline lane carries textDecoration only.
 const SocialLinkBase = styled('a', {
   platform: 'web',
-  base: '[display:inline] box-border m-0 [word-wrap:break-word] whitespace-pre-wrap [font-family:Basel,-apple-system,system-ui,BlinkMacSystemFont,"Segoe_UI",Roboto,Helvetica,Arial,sans-serif] [font-size:inherit] [line-height:inherit] [font-weight:inherit] text-neutral2 cursor-pointer [text-decoration-line:none] [text-decoration:none] duration-[0.2s] active:opacity-[0.6]',
+  base: '[display:inline] box-border m-0 [word-wrap:break-word] whitespace-pre-wrap [font-family:Inter,-apple-system,system-ui,BlinkMacSystemFont,"Segoe_UI",Roboto,Helvetica,Arial,sans-serif] [font-size:inherit] [line-height:inherit] [font-weight:inherit] text-neutral2 cursor-pointer [text-decoration-line:none] [text-decoration:none] duration-[0.2s] active:opacity-[0.6]',
   hover: [{ class: 'opacity-[0.8]' }],
   inlineStyle: () => ({ textDecoration: 'none' }),
 })

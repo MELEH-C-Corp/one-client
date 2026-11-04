@@ -80,9 +80,7 @@ describe('mycelium tokens ↔ ui/src/theme parity (INFRA-2951 exit test)', () =>
     for (const variant of Object.keys(nativeFonts) as FontVariantName[]) {
       const nativeEntry = nativeFonts[variant]
       expect({ ...nativeEntry, family: undefined }, variant).toEqual({ ...uiTable[variant], family: undefined })
-      expect(nativeEntry.family, `${variant} family`).toBe(
-        variant === 'monospace' ? 'InputMono-Regular' : 'Basel Grotesk',
-      )
+      expect(nativeEntry.family, `${variant} family`).toBe(variant === 'monospace' ? 'InputMono-Regular' : 'Inter')
     }
   })
 

@@ -68,9 +68,9 @@ export function fontsTableWeight(variant: TextVariantKey): string {
   return VARIANT_METRICS[variant].family === 'medium' ? '500' : '400'
 }
 
-/** Verbatim legacy web Basel stack (fonts.ts baselBook/baselMedium — identical strings on web). */
+/** Verbatim legacy web Inter stack (fonts.ts baselBook/baselMedium — identical strings on web). */
 const WEB_BASEL_STACK =
-  'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  'Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
 
 /**
  * Legacy web resolution for the mono variant: `resolveFontFamilyForRawDomStyles`

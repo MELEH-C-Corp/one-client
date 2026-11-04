@@ -256,7 +256,7 @@ function useCAIP25Session(activeAddress?: string): CAIP25Session {
         expiry: '0',
         walletInfo: {
           uuid: 'local',
-          rdns: 'one.meleh.wallet',
+          rdns: 'us.meleh.wallet',
           name: 'MELEH ONE',
         },
       },

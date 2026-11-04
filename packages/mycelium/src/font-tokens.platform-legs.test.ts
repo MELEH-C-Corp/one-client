@@ -86,8 +86,8 @@ const FIXED_LINE_HEIGHT_VARIANTS: readonly FontVariantName[] = [
 
 /** `fontFamilyByPlatform` — iOS names the embedded family, Android the file. */
 const FAMILY: Readonly<Record<'ios' | 'android', Readonly<Record<'book' | 'medium' | 'mono', string>>>> = {
-  ios: { book: 'Basel Grotesk', medium: 'Basel Grotesk', mono: 'InputMono-Regular' },
-  android: { book: 'Basel-Grotesk-Book', medium: 'Basel-Grotesk-Medium', mono: 'InputMono-Regular' },
+  ios: { book: 'Inter', medium: 'Inter', mono: 'InputMono-Regular' },
+  android: { book: 'Inter-Regular', medium: 'Inter-Medium', mono: 'InputMono-Regular' },
 }
 
 /** Which family key each variant renders, from ui's `platformFontFamily(...)` calls. */

@@ -37,7 +37,7 @@
   }
 }
 
-/* Basel weight presets — one class sets family + weight (Basel is a single family;
+/* UI font weight presets — one class sets family + weight (Inter is a single family;
    Book/Medium are weights 485/535, see fonts.css @font-face).
    Deliberately composite: with tailwind-merge, custom font-weight utilities classify
    into the font-family group, so a `font-basel font-weight-book` pairing would drop

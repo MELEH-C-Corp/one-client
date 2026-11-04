@@ -223,7 +223,7 @@ describe('typography lands on the RN style object', () => {
     expect(mounted.style()).toMatchObject({
       fontSize: 16,
       lineHeight: 22,
-      fontFamily: 'Basel Grotesk',
+      fontFamily: 'Inter',
       fontWeight: '400',
     })
     mounted.unmount()
@@ -232,7 +232,7 @@ describe('typography lands on the RN style object', () => {
     expect(heading.style()).toMatchObject({
       fontSize: 24,
       lineHeight: 28,
-      fontFamily: 'Basel Grotesk',
+      fontFamily: 'Inter',
       fontWeight: '400',
     })
     heading.unmount()
@@ -310,14 +310,14 @@ describe('typography lands on the RN style object', () => {
     // 485/535 web weights through the font FILES), with no warn.
     const variant = await renderNative({ variant: 'buttonLabel2' }, 'x')
     expect(variant.style()['fontWeight']).toBe('500')
-    expect(variant.style()['fontFamily']).toBe('Basel Grotesk')
+    expect(variant.style()['fontFamily']).toBe('Inter')
     variant.unmount()
 
     // An explicit token weight resolves the same way — the INFRA-3453 case:
     // rebuilt text used to render regular because '$medium' dropped.
     const explicit = await renderNative({ fontWeight: '$medium' }, 'x')
     expect(explicit.style()['fontWeight']).toBe('500')
-    expect(explicit.style()['fontFamily']).toBe('Basel Grotesk')
+    expect(explicit.style()['fontFamily']).toBe('Inter')
     explicit.unmount()
     expect(warn.mock.calls.some((call) => String(call[0]).includes('fontWeight'))).toBe(false)
 
@@ -328,7 +328,7 @@ describe('typography lands on the RN style object', () => {
     // native-font.test.ts). This config's environment is ios.
     const demoted = await renderNative({ variant: 'buttonLabel2', fontWeight: '400' }, 'x')
     expect(demoted.style()['fontWeight']).toBe('400')
-    expect(demoted.style()['fontFamily']).toBe('Basel Grotesk')
+    expect(demoted.style()['fontFamily']).toBe('Inter')
     demoted.unmount()
 
     // An RN-expressible weight passes through, keeping its input type so both
@@ -348,11 +348,11 @@ describe('typography lands on the RN style object', () => {
     // render exactly like legacy, not fall back to the variant's Book '400'.
     const numericMedium = await renderNative({ variant: 'body2', fontWeight: 535 }, 'x')
     expect(numericMedium.style()['fontWeight']).toBe(535)
-    expect(numericMedium.style()['fontFamily']).toBe('Basel Grotesk')
+    expect(numericMedium.style()['fontFamily']).toBe('Inter')
     numericMedium.unmount()
     const numericBook = await renderNative({ variant: 'body2', fontWeight: 485 }, 'x')
     expect(numericBook.style()['fontWeight']).toBe(485)
-    expect(numericBook.style()['fontFamily']).toBe('Basel Grotesk')
+    expect(numericBook.style()['fontFamily']).toBe('Inter')
     numericBook.unmount()
     // The string spelling keeps its input type, like the other pass-throughs.
     const stringMedium = await renderNative({ fontWeight: '535' }, 'x')
@@ -373,7 +373,7 @@ describe('typography lands on the RN style object', () => {
     // the web-scale 535.
     const beforeVariant = await renderNative({ fontWeight: '600', variant: 'buttonLabel2' }, 'x')
     expect(beforeVariant.style()['fontWeight']).toBe('500')
-    expect(beforeVariant.style()['fontFamily']).toBe('Basel Grotesk')
+    expect(beforeVariant.style()['fontFamily']).toBe('Inter')
     beforeVariant.unmount()
 
     // A weight that is neither an app token nor RN-legal still drops and warns
@@ -390,7 +390,7 @@ describe('typography lands on the RN style object', () => {
     // environment (native-font-environment.web.ts pins ios); Android naming is
     // pinned per variant in native-font.test.ts.
     const token = await renderNative({ fontFamily: '$body' }, 'x')
-    expect(token.style()['fontFamily']).toBe('Basel Grotesk')
+    expect(token.style()['fontFamily']).toBe('Inter')
     token.unmount()
 
     const mono = await renderNative({ fontFamily: '$monospace' }, 'x')

@@ -120,7 +120,7 @@ const DrawerTitle = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
 >(({ className, ...props }, ref) => (
-  // Subheading/1 token — same reasoning as DialogTitle (font-semibold = 600 is not a Basel weight)
+  // Subheading/1 token — same reasoning as DialogTitle (font-semibold = 600 is not an app weight)
   <DrawerPrimitive.Title ref={ref} className={cn('text-subheading-1 text-neutral1', className)} {...props} />
 ))
 DrawerTitle.displayName = DrawerPrimitive.Title.displayName

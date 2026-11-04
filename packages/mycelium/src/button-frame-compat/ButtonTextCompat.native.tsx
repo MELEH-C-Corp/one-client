@@ -18,7 +18,7 @@ import type { ButtonTextCompatProps } from './text-props-native'
 
 export type { ButtonTextCompatProps } from './text-props-native'
 
-const FONT_FAMILY_BUTTON = Platform.select({ android: 'Basel-Grotesk-Medium', default: 'Basel Grotesk' })
+const FONT_FAMILY_BUTTON = Platform.select({ android: 'Inter-Medium', default: 'Inter' })
 const FONT_WEIGHT_BUTTON = '500'
 const MAX_FONT_SIZE_MULTIPLIER = 1.2
 

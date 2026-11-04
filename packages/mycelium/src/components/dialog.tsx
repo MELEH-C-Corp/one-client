@@ -75,7 +75,7 @@ const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
-  // Subheading/1 token, not text-lg + font-semibold: 600 is not a Basel weight (Basel is
+  // Subheading/1 token, not text-lg + font-semibold: 600 is not an app weight (the app uses
   // 485/535), so it was synthesising a bold. The token carries 18px/24px at 485 and owns
   // its own line-height and tracking — don't layer a font-weight class back on.
   <DialogPrimitive.Title ref={ref} className={cn('text-subheading-1 text-neutral1', className)} {...props} />

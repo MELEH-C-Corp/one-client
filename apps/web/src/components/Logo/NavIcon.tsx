@@ -1,27 +1,18 @@
-import { Flex, type FlexCompatProps, useSporeColors } from '@universe/mycelium'
+import { Flex, type FlexCompatProps } from '@universe/mycelium'
 import { forwardRef, type ForwardRefExoticComponent, type RefAttributes, SVGProps } from 'react'
 
-function Logo({ color, onClick }: { color: string; onClick?: () => void }) {
+// The ONE wordmark, set in Grenze Gotisch and outlined to paths (brand/logo/ONE-wordmark.svg).
+function Logo({ onClick }: { onClick?: () => void }) {
+  // Explicit size (wordmark is 1677:632): an <img> in this flex row otherwise shrinks to 0px.
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
-      viewBox="0 0 22 22"
-      fill="none"
+    <img
+      src="/meleh-wordmark.svg"
+      alt="MELEH ONE"
+      width={58}
+      height={22}
       onClick={onClick}
-      cursor="pointer"
-      aria-label="MELEH ONE"
-    >
-      <rect width="22" height="22" rx="6" fill={color} />
-      <path
-        d="M5.5 15.5V6.5L11 12L16.5 6.5V15.5"
-        stroke="white"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+      style={{ cursor: 'pointer', width: 58, height: 22, flexShrink: 0 }}
+    />
   )
 }
 
@@ -54,11 +45,9 @@ type NavIconProps = SVGProps<SVGSVGElement> & {
 }
 
 export const NavIcon = ({ clickable, onClick }: NavIconProps) => {
-  const colors = useSporeColors()
-
   return (
     <Container clickable={clickable}>
-      <Logo color={colors.accent1.val} onClick={onClick} />
+      <Logo onClick={onClick} />
     </Container>
   )
 }

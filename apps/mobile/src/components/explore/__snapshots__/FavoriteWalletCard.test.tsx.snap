@@ -70,7 +70,7 @@ exports[`FavoriteWalletCard > renders without error 1`] = `
             <div
               class="css-text-146c3p1 r-maxWidth-dnmrzs r-overflow-1udh08x r-textOverflow-1udbk01 r-whiteSpace-3s2u2q r-wordWrap-1iln25a"
               dir="auto"
-              style="flex-shrink: 1; font-size: 19px; line-height: 24px; font-family: Basel Grotesk; font-weight: 400;"
+              style="flex-shrink: 1; font-size: 19px; line-height: 24px; font-family: Inter; font-weight: 400;"
             >
               0x​82D5...3Fa6
             </div>

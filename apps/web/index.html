@@ -19,8 +19,7 @@
     <link rel="preconnect" href="https://interface.gateway.uniswap.org/" crossorigin/>
     <link rel="preconnect" href="https://mainnet.infura.io/" crossorigin/>
 
-    <link rel="preload" href="/fonts/Basel-Grotesk-Book.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/Basel-Grotesk-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
     
     <!-- Cloudflare Turnstile script - loaded early for CSP compliance -->
     <link rel="preconnect" href="https://challenges.cloudflare.com" crossorigin />
@@ -28,47 +27,30 @@
 
     <style>
       * {
-        font-family: 'Basel', sans-serif;
+        font-family: 'Inter', sans-serif;
         box-sizing: border-box;
       }
 
       /**
-        Explicitly load Basel var from public/ so it does not block LCP's critical path.
+        Explicitly load Inter from public/ so it does not block LCP's critical path. One variable file
+        serves every weight, including the 485 (book) and 535 (medium) cuts. Inter and Grenze Gotisch
+        are SIL OFL 1.1, see public/fonts/*-OFL.txt.
       */
       @font-face {
-        font-family: 'Basel';
-        font-weight: 535;
-        font-style: normal;
-        font-display: block;
-        src: 
-          url('/fonts/Basel-Grotesk-Medium.woff2') format('woff2'),
-          url('/fonts/Basel-Grotesk-Medium.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'Basel';
-        font-weight: 485;
-        font-style: normal;
-        font-display: block;
-        src: 
-          url('/fonts/Basel-Grotesk-Book.woff2') format('woff2'),
-          url('/fonts/Basel-Grotesk-Book.woff') format('woff');
-      }
-
-      /* Subsetted Inter Regular, fetched lazily only when the Privy watermark renders (PrivyWatermark.tsx). */
-      @font-face {
         font-family: 'Inter';
-        font-weight: 400;
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: block;
+        src: url('/fonts/InterVariable.woff2') format('woff2');
+      }
+
+      /* MELEH ONE brand display face: wordmark and hero titles only (Latin script; Cyrillic falls back to Inter). */
+      @font-face {
+        font-family: 'Grenze Gotisch';
+        font-weight: 100 900;
         font-style: normal;
         font-display: swap;
-        unicode-range: U+0020-007E, U+00A0-024F, U+1E00-1EFF;
-        src: url('/fonts/Inter-Regular-Latin.woff2') format('woff2');
-      }
-
-      @supports (font-variation-settings: normal) {
-        * {
-          font-family: 'Basel', sans-serif;
-        }
+        src: url('/fonts/GrenzeGotisch.woff2') format('woff2');
       }
 
       html,

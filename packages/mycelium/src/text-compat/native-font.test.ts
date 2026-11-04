@@ -30,10 +30,10 @@ interface VariantPin {
   android: { fontFamily: string; fontWeight: string }
 }
 
-const IOS_BOOK = { fontFamily: 'Basel Grotesk', fontWeight: '400' }
-const IOS_MEDIUM = { fontFamily: 'Basel Grotesk', fontWeight: '500' }
-const ANDROID_BOOK = { fontFamily: 'Basel-Grotesk-Book', fontWeight: '400' }
-const ANDROID_MEDIUM = { fontFamily: 'Basel-Grotesk-Medium', fontWeight: '500' }
+const IOS_BOOK = { fontFamily: 'Inter', fontWeight: '400' }
+const IOS_MEDIUM = { fontFamily: 'Inter', fontWeight: '500' }
+const ANDROID_BOOK = { fontFamily: 'Inter-Regular', fontWeight: '400' }
+const ANDROID_MEDIUM = { fontFamily: 'Inter-Medium', fontWeight: '500' }
 const MONO = { fontFamily: 'InputMono-Regular', fontWeight: '400' }
 
 /**
@@ -177,14 +177,14 @@ describe('font-relative token resolution (native tables)', () => {
 describe('nativePlatformFont face selection', () => {
   it("Android re-keys a book-family '500' onto the Medium file (the fonts.ts face map)", () => {
     expect(nativePlatformFont({ family: 'book', weight: '500', platform: 'android' })).toEqual({
-      fontFamily: 'Basel-Grotesk-Medium',
+      fontFamily: 'Inter-Medium',
       fontWeight: '500',
     })
   })
 
   it('Android keeps non-face weights on the family file, like legacy Tamagui', () => {
     expect(nativePlatformFont({ family: 'book', weight: 'bold', platform: 'android' })).toEqual({
-      fontFamily: 'Basel-Grotesk-Book',
+      fontFamily: 'Inter-Regular',
       fontWeight: 'bold',
     })
   })
@@ -197,15 +197,15 @@ describe('nativePlatformFont face selection', () => {
     // CoreText drops to the Book face. The platform asymmetry is legacy
     // behavior, deliberately replicated (do NOT add a medium→book re-key).
     expect(nativePlatformFont({ family: 'medium', weight: '400', platform: 'android' })).toEqual({
-      fontFamily: 'Basel-Grotesk-Medium',
+      fontFamily: 'Inter-Medium',
       fontWeight: '400',
     })
     expect(nativePlatformFont({ family: 'medium', weight: 400, platform: 'android' })).toEqual({
-      fontFamily: 'Basel-Grotesk-Medium',
+      fontFamily: 'Inter-Medium',
       fontWeight: 400,
     })
     expect(nativePlatformFont({ family: 'medium', weight: '400', platform: 'ios' })).toEqual({
-      fontFamily: 'Basel Grotesk',
+      fontFamily: 'Inter',
       fontWeight: '400',
     })
   })
@@ -216,29 +216,29 @@ describe('nativePlatformFont face selection', () => {
     // re-key), iOS keeps the embedded name and CoreText picks the nearest
     // face at draw time.
     expect(nativePlatformFont({ family: 'book', weight: 535, platform: 'android' })).toEqual({
-      fontFamily: 'Basel-Grotesk-Book',
+      fontFamily: 'Inter-Regular',
       fontWeight: 535,
     })
     expect(nativePlatformFont({ family: 'medium', weight: 535, platform: 'android' })).toEqual({
-      fontFamily: 'Basel-Grotesk-Medium',
+      fontFamily: 'Inter-Medium',
       fontWeight: 535,
     })
     expect(nativePlatformFont({ family: 'book', weight: 485, platform: 'ios' })).toEqual({
-      fontFamily: 'Basel Grotesk',
+      fontFamily: 'Inter',
       fontWeight: 485,
     })
   })
 
   it('iOS always addresses the embedded family name — the weight picks the face', () => {
     expect(nativePlatformFont({ family: 'book', weight: '500', platform: 'ios' })).toEqual({
-      fontFamily: 'Basel Grotesk',
+      fontFamily: 'Inter',
       fontWeight: '500',
     })
   })
 
   it('a family with no weight in play emits fontFamily only (a fontFamily-only pool)', () => {
     expect(nativePlatformFont({ family: 'book', weight: undefined, platform: 'android' })).toEqual({
-      fontFamily: 'Basel-Grotesk-Book',
+      fontFamily: 'Inter-Regular',
     })
   })
 })

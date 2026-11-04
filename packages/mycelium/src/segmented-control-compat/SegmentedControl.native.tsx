@@ -33,7 +33,7 @@ const SMALL_FONT = needsSmallFont()
 
 // Legacy platformFontFamily('medium'): iOS uses the family name embedded in
 // the font file, Android the file name (packages/ui/src/theme/fonts.ts).
-const FONT_FAMILY_MEDIUM = Platform.select({ android: 'Basel-Grotesk-Medium', default: 'Basel Grotesk' })
+const FONT_FAMILY_MEDIUM = Platform.select({ android: 'Inter-Medium', default: 'Inter' })
 
 // Native transcription of the legacy AnimatePresence lifecycle around the
 // indicator: 'unmounted' until the selected option has a measured layout,

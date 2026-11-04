@@ -189,37 +189,37 @@ export const FiatOnRampAmountSection = forwardRef<FiatOnRampAmountSectionRef, Fi
       : `${derivedAmount}${currency.currencyInfo?.currency.symbol}`
 
     // Workaround to avoid incorrect input width calculations by react-native
-    // Decimal numbers were manually calculated for Basel Grotesk fonts and will
+    // Per-character widths are Inter Regular advance widths (em units, rounded up) and will
     // require an adjustment when the font is changed
     // oxlint-disable-next-line typescript/no-misused-spread -- biome-parity: oxlint is stricter here
     const calculatedInputWidth = [...value].reduce(
       (acc, numStr) => {
         switch (numStr) {
           case '1':
-            return acc + fontSize * 0.393
+            return acc + fontSize * 0.41
           case '2':
+          case '3':
           case '6':
           case '8':
-            return acc + fontSize * 0.596
-          case '3':
-            return acc + fontSize * 0.595
-          case '4':
-          case '0':
-            return acc + fontSize * 0.62
-          case '5':
-          case '7':
-            return acc + fontSize * 0.602
           case '9':
-            return acc + fontSize * 0.607
+            return acc + fontSize * 0.62
+          case '4':
+            return acc + fontSize * 0.65
+          case '0':
+            return acc + fontSize * 0.635
+          case '5':
+            return acc + fontSize * 0.6
+          case '7':
+            return acc + fontSize * 0.57
           case '.':
           case ',':
-            return acc + fontSize * 0.25
+            return acc + fontSize * 0.29
           default:
-            return acc + fontSize * 0.62
+            return acc + fontSize * 0.65
         }
       },
       // ensures a proper width for a "0" placeholder or adds 3 points for the input caret
-      value.length === 0 ? fontSize * 0.62 : 3,
+      value.length === 0 ? fontSize * 0.635 : 3,
     )
 
     return (

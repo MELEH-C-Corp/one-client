@@ -9,10 +9,10 @@
  * default/primary cell — neutral1 vs legacy $accent3; see the ledger in
  * labs/workbench/scripts/button-parity-exceptions.ts. The one remaining pin
  * is the legacy button font stack (theme/fonts.ts baselMedium): the font-basel
- * utility resolves to "Basel Grotesk" (different family name + fallbacks),
+ * utility resolves to "Inter" (different fallbacks),
  * which changes intrinsic button widths when the webfont isn't loaded.
  *
- * The "Basel" family itself is only declared by apps/web/index.html; every
+ * apps/web/index.html declares the "Inter" family itself; every
  * other consumer must also `@import "@universe/mycelium/fonts"` (all mycelium
  * apps already do), which registers the same cuts under that name. Otherwise
  * the pinned stack falls through to the system font, where weight 535 matches
@@ -20,7 +20,7 @@
  */
 :root {
   --sbtn-font-button:
-    Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
 }
 

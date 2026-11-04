@@ -47,14 +47,14 @@ export const NATIVE_MEDIUM_WEIGHT = '500'
 
 /**
  * fonts.ts `fontFamilyByPlatform` — RN font naming is platform-split: iOS
- * addresses the family name embedded in the font file (both Basel faces embed
- * "Basel Grotesk"; the weight picks the face), Android addresses the FILE name
- * (react-native-asset links apps/mobile/src/assets/fonts/*.otf). The same
+ * addresses the family name embedded in the font file (both Inter faces embed
+ * "Inter"; the weight picks the face), Android addresses the FILE name
+ * (react-native-asset links apps/mobile/src/assets/fonts/*.ttf). The same
  * split ButtonCompat.native.tsx and SegmentedControl.native.tsx already ship.
  */
 const NATIVE_FONT_FAMILY: Readonly<Record<NativeFontPlatform, Readonly<Record<NativeFontFamilyKey, string>>>> = {
-  ios: { book: 'Basel Grotesk', medium: 'Basel Grotesk', mono: 'InputMono-Regular' },
-  android: { book: 'Basel-Grotesk-Book', medium: 'Basel-Grotesk-Medium', mono: 'InputMono-Regular' },
+  ios: { book: 'Inter', medium: 'Inter', mono: 'InputMono-Regular' },
+  android: { book: 'Inter-Regular', medium: 'Inter-Medium', mono: 'InputMono-Regular' },
 }
 
 /** fonts.ts `adjustedSize`: +1px on native except for CJK locales (`needsSmallFont`). */

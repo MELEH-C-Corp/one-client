@@ -91,11 +91,11 @@
 		9FCEBF012A95A8E00079EDDB /* RNWalletConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEBEFF2A95A8E00079EDDB /* RNWalletConnect.swift */; };
 		9FCEBF042A95A99C0079EDDB /* RCTThemeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEBF032A95A99B0079EDDB /* RCTThemeModule.m */; };
 		A32F9FBD272343C9002CFCDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A32F9FBC272343C8002CFCDB /* GoogleService-Info.plist */; };
-		A3551F2CAC134AD49D40927F /* Basel-Grotesk-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6F33E8069B7B40AFB313B8B0 /* Basel-Grotesk-Book.otf */; };
+		A3551F2CAC134AD49D40927F /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F33E8069B7B40AFB313B8B0 /* Inter-Regular.ttf */; };
 		A3F0A5B1272B1DFA00895B25 /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0A5B0272B1DFA00895B25 /* KeychainSwiftDistrib.swift */; };
 		AC0EE0982BD826E700BCCF07 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = AC0EE0972BD826E700BCCF07 /* PrivacyInfo.xcprivacy */; };
 		AC2EF4032C914B1600EEEFDB /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = AC2EF4022C914B1600EEEFDB /* fonts */; };
-		B193AD315CF844A3BDC3D11D /* Basel-Grotesk-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C606D2C81014A0A8898F38E /* Basel-Grotesk-Medium.otf */; };
+		B193AD315CF844A3BDC3D11D /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C606D2C81014A0A8898F38E /* Inter-Medium.ttf */; };
 		BA8FC9627A40644259D9E2F9 /* Pods_WidgetsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB29AC0C0907A833F23D2C30 /* Pods_WidgetsCore.framework */; };
 		D3B63ACA9B0C42F68080B080 /* InputMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1834199AFFB04D91B05FFB64 /* InputMono-Regular.ttf */; };
 		D7926D4A878B2237137B300F /* Pods_WidgetsCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021E59CE7ECBD4FE0F3BFCFD /* Pods_WidgetsCoreTests.framework */; };
@@ -268,7 +268,7 @@
 		31CB18D02DE297D6DADB87C0 /* Pods-Uniswap.debugoptimized.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uniswap.debugoptimized.xcconfig"; path = "Target Support Files/Pods-Uniswap/Pods-Uniswap.debugoptimized.xcconfig"; sourceTree = "<group>"; };
 		36F66895EB592B9F61AE658C /* Pods-Uniswap-UniswapTests.debugoptimized.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uniswap-UniswapTests.debugoptimized.xcconfig"; path = "Target Support Files/Pods-Uniswap-UniswapTests/Pods-Uniswap-UniswapTests.debugoptimized.xcconfig"; sourceTree = "<group>"; };
 		3A2186B1FF7FB85663D96EA9 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		3C606D2C81014A0A8898F38E /* Basel-Grotesk-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Basel-Grotesk-Medium.otf"; path = "../src/assets/fonts/Basel-Grotesk-Medium.otf"; sourceTree = "<group>"; };
+		3C606D2C81014A0A8898F38E /* Inter-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.ttf"; path = "../src/assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; };
 		3D8FCE4CD401350CA74DCC89 /* Pods-WidgetsCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidgetsCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-WidgetsCoreTests/Pods-WidgetsCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E279F675B02CBC50D3B57D5 /* Pods-WidgetsCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidgetsCore.release.xcconfig"; path = "Target Support Files/Pods-WidgetsCore/Pods-WidgetsCore.release.xcconfig"; sourceTree = "<group>"; };
 		45FFF7DE2E8C2A6400362570 /* SilentPushEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SilentPushEventEmitter.m; sourceTree = "<group>"; };
@@ -295,7 +295,7 @@
 		6CA91BDE2A95226200C4063E /* RNCloudStorageBackupsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCloudStorageBackupsManager.m; sourceTree = "<group>"; };
 		6CA91BDF2A95226200C4063E /* EncryptionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionHelper.swift; sourceTree = "<group>"; };
 		6CA91BE02A95226200C4063E /* RNCloudStorageBackupsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCloudStorageBackupsManager.swift; sourceTree = "<group>"; };
-		6F33E8069B7B40AFB313B8B0 /* Basel-Grotesk-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Basel-Grotesk-Book.otf"; path = "../src/assets/fonts/Basel-Grotesk-Book.otf"; sourceTree = "<group>"; };
+		6F33E8069B7B40AFB313B8B0 /* Inter-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.ttf"; path = "../src/assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; };
 		6F3DC921A65D749C0852B10C /* Pods-Uniswap-UniswapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uniswap-UniswapTests.debug.xcconfig"; path = "Target Support Files/Pods-Uniswap-UniswapTests/Pods-Uniswap-UniswapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F7814C6D40D9C348EA1F1C7 /* Pods-OneSignalNotificationServiceExtension.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.dev.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.dev.xcconfig"; sourceTree = "<group>"; };
 		7A7637BBC9B3A68E0338D96E /* Pods-WidgetIntentExtension.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidgetIntentExtension.beta.xcconfig"; path = "Target Support Files/Pods-WidgetIntentExtension/Pods-WidgetIntentExtension.beta.xcconfig"; sourceTree = "<group>"; };
@@ -798,8 +798,8 @@
 			isa = PBXGroup;
 			children = (
 				1834199AFFB04D91B05FFB64 /* InputMono-Regular.ttf */,
-				6F33E8069B7B40AFB313B8B0 /* Basel-Grotesk-Book.otf */,
-				3C606D2C81014A0A8898F38E /* Basel-Grotesk-Medium.otf */,
+				6F33E8069B7B40AFB313B8B0 /* Inter-Regular.ttf */,
+				3C606D2C81014A0A8898F38E /* Inter-Medium.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1129,8 +1129,8 @@
 				AC0EE0982BD826E700BCCF07 /* PrivacyInfo.xcprivacy in Resources */,
 				D3B63ACA9B0C42F68080B080 /* InputMono-Regular.ttf in Resources */,
 				AC2EF4032C914B1600EEEFDB /* fonts in Resources */,
-				A3551F2CAC134AD49D40927F /* Basel-Grotesk-Book.otf in Resources */,
-				B193AD315CF844A3BDC3D11D /* Basel-Grotesk-Medium.otf in Resources */,
+				A3551F2CAC134AD49D40927F /* Inter-Regular.ttf in Resources */,
+				B193AD315CF844A3BDC3D11D /* Inter-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,55 +1,25 @@
-/* Basel Grotesk Font Faces */
-
-@font-face {
-  font-family: "Basel Grotesk";
-  src:
-    url("../fonts/Basel-Grotesk-Book.woff2") format("woff2"),
-    url("../fonts/Basel-Grotesk-Book.woff") format("woff");
-  font-weight: 485;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Basel Grotesk";
-  src:
-    url("../fonts/Basel-Grotesk-Medium.woff2") format("woff2"),
-    url("../fonts/Basel-Grotesk-Medium.woff") format("woff");
-  font-weight: 535;
-  font-style: normal;
-  font-display: swap;
-}
+/* MELEH ONE font faces: Inter (UI) and Grenze Gotisch (brand display). Both SIL OFL 1.1, see ../fonts/*-OFL.txt. */
 
 /*
- * Legacy family alias: apps/web/index.html declares these same cuts under the
- * family name "Basel" (Book 485 / Medium 535), and the legacy theme/fonts.ts
- * stack — pinned by the mycelium compat components (`--sbtn-font-button`) —
- * asks for `Basel, -apple-system, ...`. Without this alias, any consumer other
- * than apps/web resolves that stack to the system font, and weight 535 (> 500)
- * matches a Semibold/Bold system cut — visibly heavier than Basel Grotesk
- * Medium in prod. `font-display: block` mirrors apps/web/index.html so there is
- * no heavier-fallback flash. apps/web itself intentionally omits this file.
+ * Inter variable font: one file serves every weight, including the 485 (book)
+ * and 535 (medium) cuts the type scale asks for. `font-display: block` mirrors
+ * apps/web/index.html so there is no heavier-fallback flash: weight 535 (> 500)
+ * would otherwise match a Semibold/Bold system cut. apps/web itself
+ * intentionally omits this file and declares the same faces inline.
  */
 @font-face {
-  font-family: "Basel";
-  src:
-    url("../fonts/Basel-Grotesk-Book.woff2") format("woff2"),
-    url("../fonts/Basel-Grotesk-Book.woff") format("woff");
-  font-weight: 485;
+  font-family: "Inter";
+  src: url("../fonts/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;
   font-style: normal;
   font-display: block;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
+/* Brand display face: wordmark and hero titles only. Latin script only, so Cyrillic falls back to Inter. */
 @font-face {
-  font-family: "Basel";
-  src:
-    url("../fonts/Basel-Grotesk-Medium.woff2") format("woff2"),
-    url("../fonts/Basel-Grotesk-Medium.woff") format("woff");
-  font-weight: 535;
+  font-family: "Grenze Gotisch";
+  src: url("../fonts/GrenzeGotisch.woff2") format("woff2");
+  font-weight: 100 900;
   font-style: normal;
-  font-display: block;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  font-display: swap;
 }

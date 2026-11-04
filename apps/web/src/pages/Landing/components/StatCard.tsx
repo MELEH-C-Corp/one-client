@@ -20,7 +20,7 @@ const Mask = styled('div', {
 
 const CharFrame = styled('div', {
   platform: 'web',
-  base: '[font-variant-numeric:lining-nums_tabular-nums] [font-family:Basel] text-[52px] not-italic font-[500] [line-height:52px] max-[1280px]:text-[40px] max-[1280px]:[line-height:40px] max-[1050px]:text-[32px] max-[1050px]:[line-height:32px] max-[850px]:text-[28px] max-[850px]:[line-height:28px] max-[396px]:text-[22px] max-[396px]:[line-height:22px]',
+  base: '[font-variant-numeric:lining-nums_tabular-nums] [font-family:Inter] text-[52px] not-italic font-[500] [line-height:52px] max-[1280px]:text-[40px] max-[1280px]:[line-height:40px] max-[1050px]:text-[32px] max-[1050px]:[line-height:32px] max-[850px]:text-[28px] max-[850px]:[line-height:28px] max-[396px]:text-[22px] max-[396px]:[line-height:22px]',
 })
 
 function Char({ color, style, ...rest }: { color: string } & ComponentPropsWithoutRef<typeof CharFrame>): JSX.Element {
@@ -79,7 +79,7 @@ export function LiveIcon({
 
 const TitleFrame = styled('h3', {
   platform: 'web',
-  base: 'p-0 m-0 [font-family:Basel] text-[24px] not-italic font-[535] [line-height:32px] max-[1024px]:text-[18px] max-[1024px]:[line-height:26px] max-[768px]:text-[18px] max-[768px]:[line-height:20px]',
+  base: 'p-0 m-0 [font-family:Inter] text-[24px] not-italic font-[535] [line-height:32px] max-[1024px]:text-[18px] max-[1024px]:[line-height:26px] max-[768px]:text-[18px] max-[768px]:[line-height:20px]',
 })
 
 function Title({

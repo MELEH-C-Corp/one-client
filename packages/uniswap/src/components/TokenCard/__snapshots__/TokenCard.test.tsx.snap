@@ -64,7 +64,7 @@ exports[`TokenCard > renders a spacer instead of a sparkline for fewer than 2 po
           <div
             fill="none"
             stroke-width="2"
-            style="width: 12px; height: 12px; color: rgb(33, 201, 94); transform: rotate(180deg);"
+            style="width: 12px; height: 12px; color: rgb(131, 253, 128); transform: rotate(180deg);"
             viewbox="0 0 24 24"
           >
             <div
@@ -140,7 +140,7 @@ exports[`TokenCard > renders the horizontal layout without a price 1`] = `
           <div
             fill="none"
             stroke-width="2"
-            style="width: 12px; height: 12px; color: rgb(33, 201, 94); transform: rotate(180deg);"
+            style="width: 12px; height: 12px; color: rgb(131, 253, 128); transform: rotate(180deg);"
             viewbox="0 0 24 24"
           >
             <div
@@ -175,12 +175,12 @@ exports[`TokenCard > renders the horizontal layout without a price 1`] = `
         >
           <div
             offset="0"
-            stop-color="#21C95E"
+            stop-color="#83FD80"
             stop-opacity="0.16"
           />
           <div
             offset="1"
-            stop-color="#21C95E"
+            stop-color="#83FD80"
             stop-opacity="0"
           />
         </div>
@@ -192,7 +192,7 @@ exports[`TokenCard > renders the horizontal layout without a price 1`] = `
       <div
         d="M0,38C0,38,20.622,20.15,21.333,20C22.044,19.85,41.956,29.3,42.667,29C43.378,28.7,64,2,64,2"
         fill="none"
-        stroke="#21C95E"
+        stroke="#83FD80"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="1.5"
@@ -247,12 +247,12 @@ exports[`TokenCard > renders the vertical layout with a negative delta and no is
           >
             <div
               offset="0"
-              stop-color="#FF593C"
+              stop-color="#FF4D6A"
               stop-opacity="0.16"
             />
             <div
               offset="1"
-              stop-color="#FF593C"
+              stop-color="#FF4D6A"
               stop-opacity="0"
             />
           </div>
@@ -264,7 +264,7 @@ exports[`TokenCard > renders the vertical layout with a negative delta and no is
         <div
           d="M0,30C0,30,20.622,16.117,21.333,16C22.044,15.883,41.956,23.233,42.667,23C43.378,22.767,64,2,64,2"
           fill="none"
-          stroke="#FF593C"
+          stroke="#FF4D6A"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="1.5"
@@ -298,7 +298,7 @@ exports[`TokenCard > renders the vertical layout with a negative delta and no is
           <div
             fill="none"
             stroke-width="2"
-            style="width: 12px; height: 12px; color: rgb(255, 89, 60); transform: rotate(0deg);"
+            style="width: 12px; height: 12px; color: rgb(255, 77, 106); transform: rotate(0deg);"
             viewbox="0 0 24 24"
           >
             <div
@@ -368,12 +368,12 @@ exports[`TokenCard > renders the vertical layout with price, issuer label and po
           >
             <div
               offset="0"
-              stop-color="#21C95E"
+              stop-color="#83FD80"
               stop-opacity="0.16"
             />
             <div
               offset="1"
-              stop-color="#21C95E"
+              stop-color="#83FD80"
               stop-opacity="0"
             />
           </div>
@@ -385,7 +385,7 @@ exports[`TokenCard > renders the vertical layout with price, issuer label and po
         <div
           d="M0,30C0,30,20.622,16.117,21.333,16C22.044,15.883,41.956,23.233,42.667,23C43.378,22.767,64,2,64,2"
           fill="none"
-          stroke="#21C95E"
+          stroke="#83FD80"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="1.5"
@@ -424,7 +424,7 @@ exports[`TokenCard > renders the vertical layout with price, issuer label and po
           <div
             fill="none"
             stroke-width="2"
-            style="width: 12px; height: 12px; color: rgb(33, 201, 94); transform: rotate(180deg);"
+            style="width: 12px; height: 12px; color: rgb(131, 253, 128); transform: rotate(180deg);"
             viewbox="0 0 24 24"
           >
             <div

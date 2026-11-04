@@ -10,7 +10,7 @@ exports[`ProviderConnectionError > should render the component and call callback
   />
   <div
     class="flex flex-col items-stretch basis-auto box-border min-h-[0px] min-w-[0px] shrink-0 w-[100%] h-[100%] absolute top-[0px] left-[0px] z-[var(--c-z)] [background:var(--c-b)]"
-    style="--c-z: 1; --c-b: radial-gradient(70% 50% at center, transparent 0%, #FFFFFF 100%);"
+    style="--c-z: 1; --c-b: radial-gradient(70% 50% at center, transparent 0%, #FDFDFF 100%);"
   />
   <div
     class="flex basis-auto box-border relative min-h-[0px] min-w-[0px] shrink-0 flex-row-reverse items-center justify-between z-[var(--c-z)]"

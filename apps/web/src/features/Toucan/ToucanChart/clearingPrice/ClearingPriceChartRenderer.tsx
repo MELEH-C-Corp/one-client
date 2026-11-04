@@ -77,7 +77,7 @@ const DataChartContainerFrame = styled('div', {
 
 const YAxisLabelEl = styled('span', {
   platform: 'web',
-  base: 'absolute left-0 text-[10px] [font-family:Basel,sans-serif] text-neutral2 bg-surface1 pr-[6px] [transform:translateY(-50%)] pointer-events-none whitespace-nowrap z-[1]',
+  base: 'absolute left-0 text-[10px] [font-family:Inter,sans-serif] text-neutral2 bg-surface1 pr-[6px] [transform:translateY(-50%)] pointer-events-none whitespace-nowrap z-[1]',
 })
 
 interface ClearingPriceChartRendererProps {

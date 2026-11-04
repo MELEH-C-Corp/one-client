@@ -49,7 +49,7 @@ exports[`SplitLogo > renders without error 1`] = `
       <div
         fill="currentColor"
         stroke-width="8"
-        style="width: 16px; height: 16px; color: rgb(14, 159, 110);"
+        style="width: 16px; height: 16px; color: rgb(244, 41, 2);"
         viewbox="0 0 16 16"
       >
         <div

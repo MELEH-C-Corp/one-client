@@ -2,7 +2,7 @@
  * Native leg of the legacy font machinery port: `getFontStylesForVariant`
  * resolves the NATIVE column the legacy fonts.ts renders on device — the
  * adjusted ramp (+1px except CJK locales, line-heights computed from the
- * adjusted size) and the platform Basel font naming — by composing the
+ * adjusted size) and the platform Inter font naming — by composing the
  * INFRA-3461 resolvers in `./native-font` with the device environment probe.
  */
 import type { FontVariantToken } from '@universe/tailwind/types'

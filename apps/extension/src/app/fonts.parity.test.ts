@@ -6,19 +6,16 @@ import { describe, expect, it } from 'vitest'
 /**
  * Extension font contract.
  *
- * Two font families must resolve on every extension UI page:
- *   - "Basel Grotesk" — requested by the shared Tailwind base layer
- *     (packages/tailwind/css/base.css applies `font-basel`, which theme.css
- *     resolves to "Basel Grotesk").
- *   - "Basel" — requested by Tamagui text (ui/src/theme/fonts.ts, web branch)
- *     at weights 400/500.
+ * One family must resolve on every extension UI page: "Inter", requested both
+ * by the shared Tailwind base layer (packages/tailwind/css/base.css applies
+ * `font-basel`, which theme.css resolves to "Inter") and by Tamagui text
+ * (ui/src/theme/fonts.ts, web branch). It is backed by the Inter variable font
+ * in packages/tailwind/fonts, so the 485/535 book/medium weights render as-is.
  *
- * Both must be backed by the licensed Basel Grotesk sources from
- * packages/tailwind/fonts. The pre-license 2019 dev cut of the font (the old
- * src/public/assets/fonts/Basel-{Book,Medium}.woff files registered by each
- * entrypoint's index.html) must not come back: it has broken vertical metrics
- * and is missing 159 glyphs, and the unlayered `* { font-family }` rules that
- * loaded it silently overrode the layered Tailwind base on every element.
+ * Basel Grotesk is Uniswap's licensed font and must not ship with MELEH ONE.
+ * Neither it nor the pre-license 2019 dev cut (src/public/assets/fonts/
+ * Basel-{Book,Medium}.woff) may come back, and entrypoint pages must not add
+ * unlayered `* { font-family }` rules that override the layered Tailwind base.
  */
 
 const extensionRoot = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
@@ -27,6 +24,7 @@ const tailwindPkgRoot = join(extensionRoot, '..', '..', 'packages', 'tailwind')
 const appTailwindCss = readFileSync(join(extensionRoot, 'src', 'app', 'tailwind.css'), 'utf8')
 const themeCss = readFileSync(join(tailwindPkgRoot, 'css', 'theme.css'), 'utf8')
 const sharedFontsCss = readFileSync(join(tailwindPkgRoot, 'css', 'fonts.css'), 'utf8')
+const uiFontsTs = readFileSync(join(extensionRoot, '..', '..', 'packages', 'ui', 'src', 'theme', 'fonts.ts'), 'utf8')
 
 const ENTRYPOINT_HTML_PATHS = ['sidepanel', 'onboarding', 'fallback-popup', 'unitagClaim'].map((entry) =>
   join(extensionRoot, 'src', 'entrypoints', entry, 'index.html'),
@@ -53,16 +51,13 @@ describe('extension font registration', () => {
     expect(appTailwindCss).toMatch(/@import\s+["']@universe\/tailwind\/(css\/)?fonts(\.css)?["']/)
   })
 
-  it('aliases the Tamagui "Basel" family (weights 400/500) to the licensed Basel Grotesk sources', () => {
-    const baselFaces = fontFaceBlocks(appTailwindCss).filter((block) => familyOf(block) === 'Basel')
-    const weights = baselFaces
-      .map((block) => block.match(/font-weight:\s*(\d+)/)?.[1])
-      .sort((a, b) => (a ?? '').localeCompare(b ?? ''))
+  it('registers the family that Tamagui text requests, at every weight', () => {
+    const tamaguiFamily = uiFontsTs.match(/export const baselBook = isWebPlatform\s*\?\s*'([^,']+),/)?.[1]
+    expect(tamaguiFamily, 'packages/ui/src/theme/fonts.ts must define the web baselBook stack').toBeTruthy()
 
-    expect(weights).toEqual(['400', '500'])
-    for (const block of baselFaces) {
-      expect(block).toMatch(/Basel-Grotesk-(Book|Medium)\.woff2?/)
-    }
+    const face = fontFaceBlocks(sharedFontsCss).find((block) => familyOf(block) === tamaguiFamily)
+    expect(face, `packages/tailwind/css/fonts.css must register "${tamaguiFamily}"`).toBeTruthy()
+    expect(face).toMatch(/font-weight:\s*100 900/)
   })
 
   it('re-asserts the base font on body outside of @layer', () => {
@@ -83,12 +78,16 @@ describe('extension font registration', () => {
     }
   })
 
-  it('the unlicensed 2019 dev font files are gone', () => {
+  it('no Basel font files ship with the extension', () => {
     for (const file of ['Basel-Book.woff', 'Basel-Medium.woff']) {
       expect(
         existsSync(join(extensionRoot, 'src', 'public', 'assets', 'fonts', file)),
         `${file} should be deleted`,
       ).toBe(false)
     }
+    for (const file of ['Basel-Grotesk-Book.woff2', 'Basel-Grotesk-Medium.woff2']) {
+      expect(existsSync(join(tailwindPkgRoot, 'fonts', file)), `${file} should be deleted`).toBe(false)
+    }
+    expect(appTailwindCss).not.toMatch(/Basel/)
   })
 })

@@ -19,7 +19,7 @@ Mycelium is Uniswap's shared Tailwind CSS design system for Tailwind v4.
 - Animations
 
 `@universe/mycelium/fonts` imports:
-- Basel Grotesk font faces (bundled, no CORS issues)
+- Inter and Grenze Gotisch font faces (bundled, no CORS issues)
 
 ### JavaScript (for the cn utility)
 

@@ -11,8 +11,8 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Basel-Grotesk-Book.otf</string>
-		<string>Basel-Grotesk-Medium.otf</string>
+		<string>Inter-Regular.ttf</string>
+		<string>Inter-Medium.ttf</string>
 	</array>
 </dict>
 </plist>

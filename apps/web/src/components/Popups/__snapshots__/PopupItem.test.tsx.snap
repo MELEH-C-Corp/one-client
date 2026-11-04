@@ -15,7 +15,7 @@ exports[`PopupItem > renders the transient "Try again" cancel-broadcast-failure 
         <svg
           fill="currentColor"
           stroke-width="8"
-          style="width: 24px; height: 24px; color: rgb(225, 15, 15);"
+          style="width: 24px; height: 24px; color: rgb(200, 16, 46);"
           viewBox="0 0 24 24"
         >
           <path

@@ -51,7 +51,7 @@ exports[`SendCurrencyInputform > renders input in fiat correctly 1`] = `
               maxlength="79"
               placeholder="0"
               spellcheck="false"
-              style="box-sizing: border-box; margin: 0px; padding: 0px 0px 0px 0px; border-width: 0px; border-style: solid; appearance: none; resize: none; position: relative; outline-width: 0; flex-grow: 1; flex-shrink: 1; flex-basis: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; background-color: transparent; color: rgb(19, 19, 19); width: 43px; min-width: 0; max-width: calc(100% - 43px); max-height: 84px; font-family: Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 70px; font-weight: 485; line-height: 84px; outline-style: none; pointer-events: auto; --uds-input-placeholder: rgba(19, 19, 19, 0.63);"
+              style="box-sizing: border-box; margin: 0px; padding: 0px 0px 0px 0px; border-width: 0px; border-style: solid; appearance: none; resize: none; position: relative; outline-width: 0; flex-grow: 1; flex-shrink: 1; flex-basis: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; background-color: transparent; color: rgb(19, 19, 19); width: 43px; min-width: 0; max-width: calc(100% - 43px); max-height: 84px; font-family: Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 70px; font-weight: 485; line-height: 84px; outline-style: none; pointer-events: auto; --uds-input-placeholder: rgba(19, 19, 19, 0.63);"
               value="1000"
               virtualkeyboardpolicy="auto"
             />
@@ -247,7 +247,7 @@ exports[`SendCurrencyInputform > renders input in token amount correctly 1`] = `
               maxlength="79"
               placeholder="0"
               spellcheck="false"
-              style="box-sizing: border-box; margin: 0px; padding: 0px 0px 0px 0px; border-width: 0px; border-style: solid; appearance: none; resize: none; position: relative; outline-width: 0; flex-grow: 1; flex-shrink: 1; flex-basis: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; background-color: transparent; color: rgb(19, 19, 19); width: 43px; min-width: 0; max-width: 100%; max-height: 84px; font-family: Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 70px; font-weight: 485; line-height: 84px; outline-style: none; pointer-events: auto; --uds-input-placeholder: rgba(19, 19, 19, 0.63);"
+              style="box-sizing: border-box; margin: 0px; padding: 0px 0px 0px 0px; border-width: 0px; border-style: solid; appearance: none; resize: none; position: relative; outline-width: 0; flex-grow: 1; flex-shrink: 1; flex-basis: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; background-color: transparent; color: rgb(19, 19, 19); width: 43px; min-width: 0; max-width: 100%; max-height: 84px; font-family: Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 70px; font-weight: 485; line-height: 84px; outline-style: none; pointer-events: auto; --uds-input-placeholder: rgba(19, 19, 19, 0.63);"
               value="1"
               virtualkeyboardpolicy="auto"
             />
@@ -453,7 +453,7 @@ exports[`SendCurrencyInputform > should render placeholder values 1`] = `
               maxlength="79"
               placeholder="0"
               spellcheck="false"
-              style="box-sizing: border-box; margin: 0px; padding: 0px 0px 0px 0px; border-width: 0px; border-style: solid; appearance: none; resize: none; position: relative; outline-width: 0; flex-grow: 1; flex-shrink: 1; flex-basis: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; background-color: transparent; color: rgb(19, 19, 19); width: 43px; min-width: 0; max-width: calc(100% - 43px); max-height: 84px; font-family: Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 70px; font-weight: 485; line-height: 84px; outline-style: none; pointer-events: auto; --uds-input-placeholder: rgba(19, 19, 19, 0.63);"
+              style="box-sizing: border-box; margin: 0px; padding: 0px 0px 0px 0px; border-width: 0px; border-style: solid; appearance: none; resize: none; position: relative; outline-width: 0; flex-grow: 1; flex-shrink: 1; flex-basis: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; background-color: transparent; color: rgb(19, 19, 19); width: 43px; min-width: 0; max-width: calc(100% - 43px); max-height: 84px; font-family: Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 70px; font-weight: 485; line-height: 84px; outline-style: none; pointer-events: auto; --uds-input-placeholder: rgba(19, 19, 19, 0.63);"
               value=""
               virtualkeyboardpolicy="auto"
             />

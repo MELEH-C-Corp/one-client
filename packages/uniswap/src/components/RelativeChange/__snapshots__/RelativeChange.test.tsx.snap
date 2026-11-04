@@ -9,7 +9,7 @@ exports[`renders a relative change 1`] = `
     <div
       fill="none"
       stroke-width="2"
-      style="width: 16px; height: 16px; color: rgb(33, 201, 94); transform: rotate(180deg);"
+      style="width: 16px; height: 16px; color: rgb(131, 253, 128); transform: rotate(180deg);"
       viewbox="0 0 24 24"
     >
       <div
@@ -40,7 +40,7 @@ exports[`renders placeholders with absolute change 1`] = `
     <div
       fill="none"
       stroke-width="2"
-      style="width: 16px; height: 16px; color: rgb(33, 201, 94); transform: rotate(180deg);"
+      style="width: 16px; height: 16px; color: rgb(131, 253, 128); transform: rotate(180deg);"
       viewbox="0 0 24 24"
     >
       <div

@@ -14,10 +14,10 @@ import com.uniswap.R
 @Immutable
 data class CustomTypography(
   val defaultFontFamily: FontFamily = FontFamily(
-    Font(R.font.basel_grotesk_book),
-    Font(R.font.basel_grotesk_medium, FontWeight.Medium),
-    Font(R.font.basel_grotesk_medium, FontWeight.SemiBold),
-    Font(R.font.basel_grotesk_medium, FontWeight.Bold),
+    Font(R.font.inter_regular),
+    Font(R.font.inter_medium, FontWeight.Medium),
+    Font(R.font.inter_medium, FontWeight.SemiBold),
+    Font(R.font.inter_medium, FontWeight.Bold),
   ),
   val defaultLetterSpacing: TextUnit = 0.sp,
   val heading1: TextStyle = TextStyle(

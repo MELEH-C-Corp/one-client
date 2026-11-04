@@ -19,16 +19,16 @@ const adjustedSize = (fontSize: number): number => {
 // on web, it's the full family name in the file
 const fontFamilyByPlatform = {
   android: {
-    medium: 'Basel-Grotesk-Medium',
-    book: 'Basel-Grotesk-Book',
+    medium: 'Inter-Medium',
+    book: 'Inter-Regular',
   },
   ios: {
-    medium: 'Basel Grotesk',
-    book: 'Basel Grotesk',
+    medium: 'Inter',
+    book: 'Inter',
   },
   web: {
-    medium: 'Basel Grotesk Medium',
-    book: 'Basel Grotesk Book',
+    medium: 'Inter',
+    book: 'Inter',
   },
 }
 
@@ -44,13 +44,17 @@ const fontFamily = {
   },
 }
 
+// `baselMedium`/`baselBook` keep their upstream names; the family behind them is Inter.
 export const baselMedium = isWebPlatform
-  ? 'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  ? 'Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
   : fontFamily.sansSerif.medium
 
 export const baselBook = isWebPlatform
-  ? 'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  ? 'Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
   : fontFamily.sansSerif.book
+
+/** MELEH ONE brand display face (Grenze Gotisch): wordmark and hero titles only, never body text or amounts. */
+export const brandFontFamily = isWebPlatform ? '"Grenze Gotisch", Inter, serif' : fontFamily.sansSerif.book
 
 export const monospaceFontFamily = isWebPlatform
   ? 'ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Courier New", monospace'
@@ -88,7 +92,7 @@ export const defaultWeights = {
 /** Button font weight — the `$true` weight in a `$button` font context. */
 export const BUTTON_MEDIUM_WEIGHT = MEDIUM_WEIGHT
 
-// on native, the Basel font files render down a few px
+// on native, the UI font files render down a few px
 // this adjusts them to be visually centered by default
 export const NATIVE_LINE_HEIGHT_SCALE = 1.15
 

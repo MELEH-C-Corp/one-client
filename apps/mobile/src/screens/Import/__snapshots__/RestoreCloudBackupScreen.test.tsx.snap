@@ -24,14 +24,14 @@ exports[`RestoreCloudBackupScreen > renders correctly 1`] = `
             <div
               class="css-text-146c3p1"
               dir="auto"
-              style="padding-top: 0px; font-size: 19px; line-height: 24px; font-family: Basel Grotesk; font-weight: 400;"
+              style="padding-top: 0px; font-size: 19px; line-height: 24px; font-family: Inter; font-weight: 400;"
             >
               account.cloud.backup.title
             </div>
             <div
               class="css-text-146c3p1"
               dir="auto"
-              style="font-size: 15px; line-height: 18px; font-family: Basel Grotesk; font-weight: 400;"
+              style="font-size: 15px; line-height: 18px; font-family: Inter; font-weight: 400;"
             >
               account.cloud.backup.subtitle
             </div>
@@ -101,13 +101,13 @@ exports[`RestoreCloudBackupScreen > renders correctly 1`] = `
                         <div
                           class="css-text-146c3p1"
                           dir="auto"
-                          style="font-size: 19px; line-height: 24px; font-family: Basel Grotesk; font-weight: 400;"
+                          style="font-size: 19px; line-height: 24px; font-family: Inter; font-weight: 400;"
                         />
                       </div>
                       <div
                         class="css-text-146c3p1"
                         dir="auto"
-                        style="font-size: 15px; line-height: 18px; font-family: Basel Grotesk; font-weight: 400;"
+                        style="font-size: 15px; line-height: 18px; font-family: Inter; font-weight: 400;"
                       >
                         Nov 8, 55840 5:30 PM
                       </div>
@@ -199,13 +199,13 @@ exports[`RestoreCloudBackupScreen > renders correctly 1`] = `
                         <div
                           class="css-text-146c3p1"
                           dir="auto"
-                          style="font-size: 19px; line-height: 24px; font-family: Basel Grotesk; font-weight: 400;"
+                          style="font-size: 19px; line-height: 24px; font-family: Inter; font-weight: 400;"
                         />
                       </div>
                       <div
                         class="css-text-146c3p1"
                         dir="auto"
-                        style="font-size: 15px; line-height: 18px; font-family: Basel Grotesk; font-weight: 400;"
+                        style="font-size: 15px; line-height: 18px; font-family: Inter; font-weight: 400;"
                       >
                         Nov 8, 55840 5:13 PM
                       </div>
