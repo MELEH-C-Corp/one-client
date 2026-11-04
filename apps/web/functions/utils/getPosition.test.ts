@@ -38,7 +38,7 @@ describe('getPosition', () => {
     // liquidity Protocols enum: V3 = 1
     expect(mockLiquidityServicePost).toHaveBeenCalledWith('GetPosition', { chainId: 1, version: 1, tokenId: '123' })
     expect(result).toEqual({
-      title: 'WBTC/WETH on Uniswap',
+      title: 'WBTC/WETH on MELEH ONE',
       image: 'https://app.uniswap.org/api/image/positions/v3/ethereum/123',
       url: URL_BASE,
       name: 'WBTC/WETH',

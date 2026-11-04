@@ -1,0 +1,23 @@
+// MELEH ONE web app on Cloudflare Workers + Static Assets.
+// Build with `bun run build:workers` (client assets + server bundle), then `wrangler deploy` from apps/web.
+{
+  "name": "meleh-one-web",
+  "main": "build/worker/index.mjs",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./build/client",
+    "binding": "ASSETS",
+    // Files are served as-is; every extensionless route (including "/") reaches the Worker,
+    // which returns index.html with route-specific meta tags.
+    "html_handling": "none",
+    "not_found_handling": "none",
+  },
+  "routes": [{ "pattern": "app.meleh.us", "custom_domain": true }],
+  "vars": {
+    "ENVIRONMENT": "production",
+  },
+  "observability": {
+    "enabled": true,
+  },
+}

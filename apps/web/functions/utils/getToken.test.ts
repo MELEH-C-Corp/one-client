@@ -40,7 +40,7 @@ describe('getToken', () => {
       address: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
     })
     expect(result).toEqual({
-      title: 'Get UNI on Uniswap',
+      title: 'Get UNI on MELEH ONE',
       image: 'https://app.uniswap.org/api/image/tokens/ethereum/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
       url: 'https://app.uniswap.org/explore/tokens/ethereum/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
       tokenData: {

@@ -1,4 +1,4 @@
-// Server bundle for the ECS and Vercel targets; run after the client `vite build`.
+// Server bundle for the ECS, Vercel and Cloudflare Workers targets; run after the client `vite build`.
 // Kept separate from vite.config.mts: its node-polyfill aliases and .env defines must not reach server code.
 import { cpSync, existsSync } from 'node:fs'
 import path from 'node:path'
@@ -16,13 +16,20 @@ const TARGETS = {
     outDir: '.vercel/output/functions/api.func',
     deploymentEnv: process.env.VERCEL_ENV,
   },
+  // wrangler re-bundles this output (see wrangler.jsonc), resolving @vercel/og's workerd build and its wasm.
+  workers: {
+    entry: 'functions/worker-entry.ts',
+    outDir: 'build/worker',
+    deploymentEnv: process.env.DEPLOYMENT_ENV,
+  },
 }
 
 const targetName = process.env.DEPLOY_TARGET
-if (targetName !== 'ecs' && targetName !== 'vercel') {
-  throw new Error(`vite.server.config.mts: DEPLOY_TARGET must be ecs or vercel (got ${targetName})`)
+if (targetName !== 'ecs' && targetName !== 'vercel' && targetName !== 'workers') {
+  throw new Error(`vite.server.config.mts: DEPLOY_TARGET must be ecs, vercel or workers (got ${targetName})`)
 }
 const target = TARGETS[targetName]
+const isWorkers = targetName === 'workers'
 
 // @vercel/og readFileSync's these next to its module, which is the single-file bundle.
 const OG_ASSETS = ['noto-sans-v27-latin-regular.ttf', 'yoga.wasm', 'resvg.wasm']
@@ -53,12 +60,13 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
-  // The runtime image ships no node_modules.
+  // The runtime image ships no node_modules. On Workers, @vercel/og stays external for wrangler to bundle.
   ssr: {
     noExternal: true,
-    target: 'node',
+    external: isWorkers ? ['@vercel/og'] : [],
+    target: isWorkers ? 'webworker' : 'node',
   },
-  plugins: [copyOgAssetsPlugin()],
+  plugins: isWorkers ? [] : [copyOgAssetsPlugin()],
   build: {
     ssr: target.entry,
     outDir: target.outDir,

@@ -58,7 +58,7 @@ export default async function getPool({
     isV2: protocolVersion === GraphQLApi.ProtocolVersion.V2,
   })
   const name = `${pool.token0Metadata?.symbol ?? 'Unknown'}/${pool.token1Metadata?.symbol ?? 'Unknown'}`
-  const title = `${name} on Uniswap`
+  const title = `${name} on MELEH ONE`
 
   return {
     title,

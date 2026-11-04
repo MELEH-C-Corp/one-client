@@ -40,7 +40,7 @@ describe('getAuction', () => {
       }),
     )
     expect(result).toEqual({
-      title: 'Bid on EXM on Uniswap',
+      title: 'Bid on EXM on MELEH ONE',
       image: 'https://app.uniswap.org/api/image/auctions/base/0xABCDEFabcdefABCDEFabcdefABCDEFabcdefABCD',
       url: 'https://app.uniswap.org/explore/auctions/base/0xABCDEFabcdefABCDEFabcdefABCDEFabcdefABCD',
       description: 'Bid on Example Token in a Uniswap token auction.',

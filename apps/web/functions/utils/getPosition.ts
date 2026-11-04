@@ -82,7 +82,7 @@ export default async function getPosition({
   const token0Symbol = position.token0Metadata?.symbol ?? 'Unknown'
   const token1Symbol = position.token1Metadata?.symbol ?? 'Unknown'
   const name = `${token0Symbol}/${token1Symbol}`
-  const title = `${name} on Uniswap`
+  const title = `${name} on MELEH ONE`
   // Twin of the transitional fallback in parseFeeData (parseLiquidityServicePosition.ts): until the
   // backend serves is_dynamic_fee on Position, the flag alone would render a dynamic position's
   // sentinel fee as a ~838% rate. Drop both together once a served position carries the flag.

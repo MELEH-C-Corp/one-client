@@ -247,18 +247,17 @@ export async function metaTagInjectionMiddleware(c: Context, next: Next): Promis
     } else if (pathname === '/launches') {
       // English on purpose (like the default card below): crawlers read OG tags once per URL and don't reliably send Accept-Language.
       data = {
-        title: 'Token launches on Uniswap',
+        title: 'Token launches on MELEH ONE',
         image: defaultImageUri(requestURL.origin),
         url: canonicalUrl,
         description: 'Discover and trade new token launches across launchpads, all in one place.',
       }
     } else {
       data = {
-        title: 'Uniswap Interface',
+        title: 'MELEH ONE',
         image: defaultImageUri(requestURL.origin),
         url: canonicalUrl,
-        description:
-          'Swap crypto on Ethereum, Base, Arbitrum, Polygon, Unichain and more. The DeFi platform trusted by millions.',
+        description: 'Swap and send crypto on Ethereum, Base, Arbitrum and Unichain with MELEH ONE.',
       }
     }
 

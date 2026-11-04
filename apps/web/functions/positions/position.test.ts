@@ -17,18 +17,18 @@ test.each(positions)('should inject metadata for valid positions', async (positi
   const image = `http://localhost:3000/api/image/positions/${position.version}/${position.network}/${position.tokenId}`
   const body = await fetch(new Request(url)).then((res) => res.text())
 
-  expect(body).toContain(`<meta property="og:title" content="${position.name} on Uniswap" data-rh="true">`)
+  expect(body).toContain(`<meta property="og:title" content="${position.name} on MELEH ONE" data-rh="true">`)
   expect(body).toContain(`<meta property="og:image" content="${image}" data-rh="true">`)
   expect(body).toContain(`<meta property="og:image:width" content="1200" data-rh="true">`)
   expect(body).toContain(`<meta property="og:image:height" content="630" data-rh="true">`)
-  expect(body).toContain(`<meta property="og:image:alt" content="${position.name} on Uniswap" data-rh="true">`)
+  expect(body).toContain(`<meta property="og:image:alt" content="${position.name} on MELEH ONE" data-rh="true">`)
   expect(body).toContain(`<meta property="og:type" content="website" data-rh="true">`)
   expect(body).toContain(`<meta property="og:url" content="${url}" data-rh="true">`)
   expect(body).toContain(`<meta property="twitter:card" content="summary_large_image" data-rh="true">`)
-  expect(body).toContain(`<meta property="twitter:title" content="${position.name} on Uniswap" data-rh="true">`)
+  expect(body).toContain(`<meta property="twitter:title" content="${position.name} on MELEH ONE" data-rh="true">`)
   expect(body).toContain(`<meta property="twitter:image" content="${image}" data-rh="true">`)
   // The default fallback card must not win.
-  expect(body).not.toContain('<meta property="og:title" content="Uniswap Interface" data-rh="true">')
+  expect(body).not.toContain('<meta property="og:title" content="MELEH ONE" data-rh="true">')
 })
 
 const invalidPositions = [

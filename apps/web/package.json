@@ -20,6 +20,8 @@
     "build:e2e": "nx build web -c e2e",
     "build:ecs": "nx build web -c ecs",
     "build:ipfs": "nx build web -c ipfs",
+    "build:workers": "nx build web -c workers",
+    "deploy:workers": "nx build web -c workers && wrangler deploy",
     "preview": "nx preview web -c production",
     "preview:staging": "nx preview web -c staging",
     "preview:e2e": "nx preview web -c e2e",
