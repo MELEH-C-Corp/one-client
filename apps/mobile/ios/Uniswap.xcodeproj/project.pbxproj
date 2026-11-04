@@ -2153,7 +2153,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev.widgets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -2198,9 +2198,9 @@
 				MARKETING_VERSION = 1.86;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.widgets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.widgets";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.widgets";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2244,9 +2244,9 @@
 				MARKETING_VERSION = 1.86;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev.widgets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.dev.widgets";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.dev.widgets";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2290,9 +2290,9 @@
 				MARKETING_VERSION = 1.86;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.beta.widgets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.beta.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.beta.widgets";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.beta.widgets";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2333,7 +2333,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev.WidgetIntentExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev.WidgetIntentExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -2375,9 +2375,9 @@
 				MARKETING_VERSION = 1.86;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.WidgetIntentExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.WidgetIntentExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.WidgetIntentExtension";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.WidgetIntentExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2418,9 +2418,9 @@
 				MARKETING_VERSION = 1.86;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev.WidgetIntentExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev.WidgetIntentExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.dev.WidgetIntentExtension";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.dev.WidgetIntentExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2461,9 +2461,9 @@
 				MARKETING_VERSION = 1.86;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.beta.WidgetIntentExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.beta.WidgetIntentExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.beta.WidgetIntentExtension";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.beta.WidgetIntentExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2501,7 +2501,7 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev;
 				PRODUCT_NAME = Uniswap;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Uniswap/RNEthersRs/RNEthersRS-Bridging-Header.h";
@@ -2539,9 +2539,9 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one;
 				PRODUCT_NAME = Uniswap;
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one";
 				SWIFT_OBJC_BRIDGING_HEADER = "Uniswap/RNEthersRs/RNEthersRS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2576,7 +2576,7 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev;
 				PRODUCT_NAME = Uniswap;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Uniswap/RNEthersRs/RNEthersRS-Bridging-Header.h";
@@ -2844,7 +2844,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev.WidgetIntentExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev.WidgetIntentExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -2887,7 +2887,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -3141,7 +3141,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev.widgets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3184,7 +3184,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -3228,9 +3228,9 @@
 				MARKETING_VERSION = 1.86;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.OneSignalNotificationServiceExtension";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.OneSignalNotificationServiceExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -3368,9 +3368,9 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.beta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.beta;
 				PRODUCT_NAME = Uniswap;
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.beta";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.beta";
 				SWIFT_OBJC_BRIDGING_HEADER = "Uniswap/RNEthersRs/RNEthersRS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -3436,9 +3436,9 @@
 				MARKETING_VERSION = 1.86;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.beta.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.beta.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.beta.OneSignalNotificationServiceExtension";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.beta.OneSignalNotificationServiceExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -3576,9 +3576,9 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev;
 				PRODUCT_NAME = Uniswap;
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.dev";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "Uniswap/RNEthersRs/RNEthersRS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -3644,9 +3644,9 @@
 				MARKETING_VERSION = 1.86;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uniswap.mobile.dev.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meleh.one.dev.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.uniswap.mobile.dev.OneSignalNotificationServiceExtension";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.meleh.one.dev.OneSignalNotificationServiceExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;

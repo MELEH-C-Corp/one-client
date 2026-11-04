@@ -7,7 +7,7 @@ const useEasBuildCache = !process.env['EXPO_LOCAL_NO_BUILD_CACHE']
 const config: ExpoConfig = {
   name: 'Uniswap',
   slug: 'uniswapmobile',
-  scheme: 'uniswap',
+  scheme: 'melehone',
   owner: 'uniswap',
   extra: {
     eas: {

@@ -87,8 +87,8 @@ const PHANTOM_WALLET = {
   name: CONNECTION_PROVIDER_NAMES.PHANTOM,
 } as ExternalWallet
 
-// The Uniswap Mobile row is labeled with a translated string rather than the wallet's name.
-const UNISWAP_MOBILE_LABEL = 'Uniswap Mobile'
+// The MELEH ONE Mobile row is labeled with a translated string rather than the wallet's name.
+const UNISWAP_MOBILE_LABEL = 'MELEH ONE Mobile'
 const OTHER_WALLETS_LABEL = 'Other wallets'
 const CONNECT_A_WALLET_TITLE = 'Connect a wallet'
 const SWITCH_WALLET_TITLE = 'Switch wallet'
@@ -137,7 +137,7 @@ describe('EmbeddedWalletConnectionsModal', () => {
       mocked(useRecentConnectorId).mockReturnValue(undefined)
     })
 
-    it('renders the recent wallet above Uniswap Mobile', () => {
+    it('renders the recent wallet above MELEH ONE Mobile', () => {
       mocked(useRecentConnectorId).mockReturnValue(METAMASK_WALLET.id)
 
       const { container } = render(<EmbeddedWalletConnectionsModal />)
@@ -145,7 +145,7 @@ describe('EmbeddedWalletConnectionsModal', () => {
       expect(renderedOptionOrder(container)).toEqual([METAMASK_WALLET.name, UNISWAP_MOBILE_LABEL, PHANTOM_WALLET.name])
     })
 
-    it('renders Uniswap Mobile first when there is no recent wallet', () => {
+    it('renders MELEH ONE Mobile first when there is no recent wallet', () => {
       mocked(useRecentConnectorId).mockReturnValue(undefined)
 
       const { container } = render(<EmbeddedWalletConnectionsModal />)
@@ -153,7 +153,7 @@ describe('EmbeddedWalletConnectionsModal', () => {
       expect(renderedOptionOrder(container)).toEqual([UNISWAP_MOBILE_LABEL, METAMASK_WALLET.name, PHANTOM_WALLET.name])
     })
 
-    it('keeps Uniswap Mobile first when it is itself the recent connector', () => {
+    it('keeps MELEH ONE Mobile first when it is itself the recent connector', () => {
       mocked(useRecentConnectorId).mockReturnValue(UNISWAP_MOBILE_WALLET.id)
 
       const { container } = render(<EmbeddedWalletConnectionsModal />)

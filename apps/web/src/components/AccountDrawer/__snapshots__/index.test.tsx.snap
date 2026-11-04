@@ -87,7 +87,7 @@ exports[`AccountDrawer tests > AccountDrawer default styles 1`] = `
                                 <span
                                   class="[display:inline] box-border m-0 [word-wrap:break-word] [font-family:var(--stext-font-medium)] text-[16px] [line-height:18.4px] [font-weight:535] [color:var(--stext-white)] whitespace-nowrap"
                                 >
-                                  Get Uniswap Wallet
+                                  Get MELEH ONE
                                 </span>
                                 <span
                                   class="[display:inline] box-border m-0 [word-wrap:break-word] [font-family:var(--stext-font-book)] text-[12px] [line-height:16px] [font-weight:485] [color:var(--stext-white)] whitespace-nowrap"
@@ -140,7 +140,7 @@ exports[`AccountDrawer tests > AccountDrawer default styles 1`] = `
                               <span
                                 class="[display:inline] box-border m-0 [word-wrap:break-word] [font-family:var(--stext-font-medium)] text-[16px] [line-height:18.4px] [font-weight:535] [color:var(--stext-neutral1)] whitespace-nowrap"
                               >
-                                Uniswap Mobile
+                                MELEH ONE Mobile
                               </span>
                               <span
                                 class="[display:inline] box-border m-0 [word-wrap:break-word] [font-family:var(--stext-font-book)] text-[12px] [line-height:16px] [font-weight:485] [color:var(--stext-neutral2)] whitespace-nowrap"
@@ -401,7 +401,7 @@ exports[`AccountDrawer tests > AccountDrawer default styles 1`] = `
                                 <span
                                   class="[display:inline] box-border m-0 [word-wrap:break-word] [font-family:var(--stext-font-medium)] text-[16px] [line-height:18.4px] [font-weight:535] [color:var(--stext-white)] whitespace-nowrap"
                                 >
-                                  Get Uniswap Wallet
+                                  Get MELEH ONE
                                 </span>
                                 <span
                                   class="[display:inline] box-border m-0 [word-wrap:break-word] [font-family:var(--stext-font-book)] text-[12px] [line-height:16px] [font-weight:485] [color:var(--stext-white)] whitespace-nowrap"
@@ -454,7 +454,7 @@ exports[`AccountDrawer tests > AccountDrawer default styles 1`] = `
                               <span
                                 class="[display:inline] box-border m-0 [word-wrap:break-word] [font-family:var(--stext-font-medium)] text-[16px] [line-height:18.4px] [font-weight:535] [color:var(--stext-neutral1)] whitespace-nowrap"
                               >
-                                Uniswap Mobile
+                                MELEH ONE Mobile
                               </span>
                               <span
                                 class="[display:inline] box-border m-0 [word-wrap:break-word] [font-family:var(--stext-font-book)] text-[12px] [line-height:16px] [font-weight:485] [color:var(--stext-neutral2)] whitespace-nowrap"

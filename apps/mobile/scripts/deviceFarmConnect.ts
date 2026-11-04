@@ -227,7 +227,7 @@ execFileSync('bunx', connectArgs, { stdio: 'inherit' })
 
 console.log(`
 ${GREEN}Connected.${RESET} Next steps (session is created — and ${YELLOW}billing starts${RESET} — at \`open\`):
-  bunx agent-device open com.uniswap.mobile.dev   # ~70s: allocates device + installs app
+  bunx agent-device open com.meleh.one.dev   # ~70s: allocates device + installs app
   bunx agent-device snapshot -i                   # semantic UI tree with @eN refs
   bunx agent-device click @eN --settle
   bunx agent-device close                         # stop PROMPTLY — device minutes are metered

@@ -11,7 +11,7 @@ import android.os.Bundle
  * `launchMode="singleTask"` (and only from `src/main/AndroidManifest.xml`).
  * MainActivity is deliberately `singleTop` (Google Sign-In / Drive restore), so
  * without this activity `expo run:android` cannot build a
- * `uniswap://expo-development-client/?url=…` deep link and opens the app with
+ * `melehone://expo-development-client/?url=…` deep link and opens the app with
  * no Metro URL.
  *
  * The manifest declares this activity as `android:enabled="false"`, so it never runs: the

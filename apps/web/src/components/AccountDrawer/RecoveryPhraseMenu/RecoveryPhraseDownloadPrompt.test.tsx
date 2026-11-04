@@ -39,9 +39,9 @@ describe('RecoveryPhraseDownloadPrompt', () => {
       env.isMobileWeb = true
     })
 
-    it('opens the OS-appropriate app store from the "Get Uniswap Mobile" button', () => {
+    it('opens the OS-appropriate app store from the "Get MELEH ONE Mobile" button', () => {
       render(<RecoveryPhraseDownloadPrompt onBack={vi.fn()} onContinueOnWeb={vi.fn()} />)
-      fireEvent.click(screen.getByText('Get Uniswap Mobile'))
+      fireEvent.click(screen.getByText('Get MELEH ONE Mobile'))
       expect(openDownloadApp).toHaveBeenCalledOnce()
     })
 
@@ -66,9 +66,9 @@ describe('RecoveryPhraseDownloadPrompt', () => {
       expect(screen.getByText('Browser extension')).toBeInTheDocument()
     })
 
-    it('does not render the "Get Uniswap Mobile" button or call openDownloadApp', () => {
+    it('does not render the "Get MELEH ONE Mobile" button or call openDownloadApp', () => {
       render(<RecoveryPhraseDownloadPrompt onBack={vi.fn()} onContinueOnWeb={vi.fn()} />)
-      expect(screen.queryByText('Get Uniswap Mobile')).not.toBeInTheDocument()
+      expect(screen.queryByText('Get MELEH ONE Mobile')).not.toBeInTheDocument()
       expect(openDownloadApp).not.toHaveBeenCalled()
     })
   })

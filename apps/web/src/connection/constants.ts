@@ -30,7 +30,7 @@ export const PLAYWRIGHT_CONNECT_ADDRESS = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb
 
 // Dapp identity shared by the MetaMask Connect EVM and Solana clients.
 export const METAMASK_CONNECT_DAPP_METADATA = {
-  name: 'Uniswap',
+  name: 'MELEH ONE',
   url: UNISWAP_WEB_URL,
   iconUrl: `${UNISWAP_WEB_URL}${UNISWAP_LOGO}`,
 }

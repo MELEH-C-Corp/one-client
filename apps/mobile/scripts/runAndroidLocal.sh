@@ -66,15 +66,15 @@ KEYSTORE_SCRIPT="$SCRIPT_DIR/downloadAndroidKeystore.sh"
 case "$VARIANT" in
   dev)
     EXPO_VARIANT="devRelease"
-    APP_ID="com.uniswap.mobile.dev"
+    APP_ID="com.meleh.one.dev"
     ;;
   beta)
     EXPO_VARIANT="betaRelease"
-    APP_ID="com.uniswap.mobile.beta"
+    APP_ID="com.meleh.one.beta"
     ;;
   prod)
     EXPO_VARIANT="prodRelease"
-    APP_ID="com.uniswap.mobile"
+    APP_ID="com.meleh.one"
     ;;
   *)
     echo "ERROR: Unknown variant '$VARIANT'. Valid: dev, beta, prod." >&2

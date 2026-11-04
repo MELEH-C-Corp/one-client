@@ -10,7 +10,7 @@ import OSLog
 import UIKit
 import WidgetKit
 
-let APP_GROUP = "group.com.uniswap.widgets"
+let APP_GROUP = "group.com.meleh.one.widgets"
 
 public struct WidgetDataFavorites: Decodable {
   

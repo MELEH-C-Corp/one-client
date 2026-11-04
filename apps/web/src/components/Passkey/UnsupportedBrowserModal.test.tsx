@@ -31,13 +31,13 @@ describe('UnsupportedBrowserModal', () => {
 
     expect(screen.getByText('Unsupported browser')).toBeInTheDocument()
     expect(
-      screen.getByText('Try a different device/browser, or download the Uniswap wallet to continue.'),
+      screen.getByText('Try a different device/browser, or download the MELEH ONE wallet to continue.'),
     ).toBeInTheDocument()
     expect(screen.getByTestId(TestID.UnsupportedBrowserGetWallet)).toBeInTheDocument()
     expect(screen.getByTestId(TestID.UnsupportedBrowserClose)).toBeInTheDocument()
   })
 
-  it('"Get Uniswap Wallet" opens the app-download modal on the QR (mobile) page', () => {
+  it('"Get MELEH ONE" opens the app-download modal on the QR (mobile) page', () => {
     render(<UnsupportedBrowserModal />)
 
     fireEvent.click(screen.getByTestId(TestID.UnsupportedBrowserGetWallet))

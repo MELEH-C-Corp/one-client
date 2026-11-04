@@ -309,7 +309,8 @@ export function useMarginMarkets(): {
     // venue nested inside it — expand back to one live/market entry per venue, matching how every
     // consumer (retry-cap math, the market selector) still keys off a single-venue MarginMarket.
     for (const row of data?.markets ?? []) {
-      for (const venue of row.venues) {
+      // oxlint-disable-next-line typescript/no-unnecessary-condition -- live API can omit `venues` despite the type (public-mirror schema drift); without this the swap page crashes
+      for (const venue of row.venues ?? []) {
         const { collateralToken, debtToken } = marginMarketRowTokens(row)
         const key = marginMarketKey({ collateralToken, debtToken, venue: venue.venue })
         liveByKey.set(key, toLive({ row, venue }))

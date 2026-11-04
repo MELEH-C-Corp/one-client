@@ -15,7 +15,7 @@ export async function cryptoKeyToJWK(key: CryptoKey): Promise<JsonWebKey> {
 }
 
 export function getScantasticUrl({ uuid, publicKey, vendor, model, browser }: ScantasticParams): string {
-  let qrURI = `uniswap://scantastic?pubKey=${JSON.stringify(publicKey)}&uuid=${encodeURIComponent(uuid)}`
+  let qrURI = `melehone://scantastic?pubKey=${JSON.stringify(publicKey)}&uuid=${encodeURIComponent(uuid)}`
   if (vendor) {
     qrURI = qrURI.concat(`&vendor=${encodeURIComponent(vendor)}`)
   }

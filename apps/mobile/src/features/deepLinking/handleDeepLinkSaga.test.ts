@@ -67,10 +67,10 @@ const wcUri = 'wc:af098@2?relay-protocol=irn&symKey=51e'
 // oxlint-disable-next-line jest/no-export -- suppressed
 export const wcUniversalLinkUrl = `https://uniswap.org/app/wc?uri=${wcUri}`
 // oxlint-disable-next-line jest/no-export -- suppressed
-export const wcAsParamInUniwapScheme = `uniswap://wc?uri=${wcUri}`
+export const wcAsParamInUniwapScheme = `melehone://wc?uri=${wcUri}`
 // oxlint-disable-next-line jest/no-export -- suppressed
-export const wcInUniwapScheme = `uniswap://${wcUri}`
-const invalidUrlSchemeUrl = `uniswap://invalid?param=pepe`
+export const wcInUniwapScheme = `melehone://${wcUri}`
+const invalidUrlSchemeUrl = `melehone://invalid?param=pepe`
 
 const stateWithActiveAccountAddress = {
   wallet: {
@@ -457,7 +457,7 @@ describe(handleDeepLink, () => {
 
   it('Handles showing token details for a token', () => {
     const payload = {
-      url: `uniswap://app/tokendetails?currencyId=${SAMPLE_CURRENCY_ID_1}&source=push`,
+      url: `melehone://app/tokendetails?currencyId=${SAMPLE_CURRENCY_ID_1}&source=push`,
       coldStart: false,
     }
     return expectSaga(handleDeepLink, {
@@ -479,7 +479,7 @@ describe(handleDeepLink, () => {
 
   it('opens the Home Earn card expanded for an Earn push deeplink', async () => {
     const payload = {
-      url: 'uniswap://app/earn?source=push',
+      url: 'melehone://app/earn?source=push',
       coldStart: false,
     }
     const now = vi.spyOn(Date, 'now').mockReturnValue(1_786_557_600_000)
@@ -515,7 +515,7 @@ describe(handleDeepLink, () => {
 
   it('Handles showing fiat onramp', () => {
     const payload = {
-      url: `uniswap://app/fiatonramp?userAddress=${account.address}&source=push`,
+      url: `melehone://app/fiatonramp?userAddress=${account.address}&source=push`,
       coldStart: false,
     }
     return expectSaga(handleDeepLink, {
@@ -542,7 +542,7 @@ describe(handleDeepLink, () => {
 
   it('Shows the CEX transfer modal when the fiat onramp is region-blocked', async () => {
     const payload = {
-      url: `uniswap://app/fiatonramp?userAddress=${account.address}&source=push`,
+      url: `melehone://app/fiatonramp?userAddress=${account.address}&source=push`,
       coldStart: false,
     }
     await expectSaga(handleDeepLink, {
@@ -559,7 +559,7 @@ describe(handleDeepLink, () => {
 
   it('Handles MoonPay exclusive fiat onramp deeplink', () => {
     const payload = {
-      url: `uniswap://app/fiatonramp?moonpayOnly=true&source=moonpay-ad`,
+      url: `melehone://app/fiatonramp?moonpayOnly=true&source=moonpay-ad`,
       coldStart: false,
     }
     return expectSaga(handleDeepLink, {
@@ -594,7 +594,7 @@ describe(handleDeepLink, () => {
 
   it('Handles MoonPay exclusive fiat onramp deeplink with token and amount', () => {
     const payload = {
-      url: `uniswap://app/fiatonramp?moonpayOnly=true&moonpayCurrencyCode=eth&amount=100&source=moonpay-ad`,
+      url: `melehone://app/fiatonramp?moonpayOnly=true&moonpayCurrencyCode=eth&amount=100&source=moonpay-ad`,
       coldStart: false,
     }
     return expectSaga(handleDeepLink, {

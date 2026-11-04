@@ -18,7 +18,7 @@ const QUOTE_TIMEOUT_MS = ONE_SECOND_MS * 45
 // Matches a rendered quote amount: at least one non-zero digit.
 const NON_ZERO_AMOUNT_REGEX = /[1-9]/
 
-// The web app's wallet modal option for the detected Uniswap Extension
+// The web app's wallet modal option for the detected MELEH ONE Extension
 // (apps/web WalletModal/UniswapWalletOptions.tsx).
 const CONNECT_EXTENSION_OPTION_TESTID = 'connect-uniswap-extension'
 
@@ -41,7 +41,7 @@ test.describe('Extension-connected web swap', { tag: '@publish-gate' }, () => {
     const getCriticalErrors = collectCriticalPageErrors(webPage)
     await webPage.goto(WEB_SWAP_URL, { waitUntil: 'domcontentloaded' })
 
-    // Preferred path: drive the real connect flow — navbar Connect -> "Uniswap Extension"
+    // Preferred path: drive the real connect flow — navbar Connect -> "MELEH ONE Extension"
     // option (detected via the injected EIP-6963 provider).
     await webPage.getByTestId(TestID.NavConnectWalletButton).first().click()
     const extensionOption = webPage.getByTestId(CONNECT_EXTENSION_OPTION_TESTID).first()

@@ -98,7 +98,7 @@ android {
 
     namespace "com.uniswap"
     defaultConfig {
-        applicationId "com.uniswap.mobile"
+        applicationId "com.meleh.one"
         compileSdk rootProject.ext.compileSdkVersion
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -146,12 +146,12 @@ android {
     productFlavors {
       dev {
         isDefault(true)
-        applicationId "com.uniswap.mobile.dev"
+        applicationId "com.meleh.one.dev"
         versionName devVersionName
         dimension "variant"
       }
       beta {
-        applicationId "com.uniswap.mobile.beta"
+        applicationId "com.meleh.one.beta"
         versionName betaVersionName
         dimension "variant"
       }

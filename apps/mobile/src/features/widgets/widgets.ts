@@ -17,7 +17,7 @@ import { WidgetEvent } from 'uniswap/src/types/widgets'
 import { analytics } from 'utilities/src/telemetry/analytics/analytics'
 import { Account } from 'wallet/src/features/wallet/accounts/types'
 
-const APP_GROUP = 'group.com.uniswap.widgets'
+const APP_GROUP = 'group.com.meleh.one.widgets'
 const KEY_WIDGET_EVENTS = getBuildVariant() + '.widgets.configuration.events'
 const KEY_WIDGET_CACHE = getBuildVariant() + '.widgets.configuration.cache'
 const KEY_WIDGETS_FAVORITE = getBuildVariant() + '.widgets.favorites'

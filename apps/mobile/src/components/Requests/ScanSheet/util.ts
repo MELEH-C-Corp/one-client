@@ -212,7 +212,7 @@ function getValidEvmAddress(address: string): Nullable<string> {
   })
 }
 
-// format is uniswap://scantastic?<params>
+// format is melehone://scantastic?<params>
 export function getScantasticQueryParams(uri: string): Nullable<string> {
   if (!uri.startsWith(UNISWAP_URL_SCHEME_SCANTASTIC)) {
     return null

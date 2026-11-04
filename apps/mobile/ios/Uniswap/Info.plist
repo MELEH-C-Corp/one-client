@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Uniswap</string>
+	<string>MELEH ONE</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconName</key>
@@ -61,10 +61,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>uniswap</string>
+			<string>melehone</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>uniswap</string>
+				<string>melehone</string>
 			</array>
 		</dict>
 		<dict>
@@ -135,7 +135,7 @@
 		<string>TokenPriceConfigurationIntent</string>
 	</array>
 	<key>OneSignal_app_groups_key</key>
-	<string>group.com.uniswap.mobile.onesignal</string>
+	<string>group.com.meleh.one.onesignal</string>
 	<key>OneSignal_suppress_launch_urls</key>
 	<true/>
 	<key>RCTNewArchEnabled</key>

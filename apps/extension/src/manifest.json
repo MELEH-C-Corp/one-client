@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Uniswap Extension",
-  "description": "The Uniswap Extension is a self-custody crypto wallet that's built for swapping.",
+  "name": "MELEH ONE",
+  "description": "MELEH ONE is a self-custody crypto wallet with a connected neobank account.",
   "version": "1.86.0",
   "minimum_chrome_version": "116",
   "icons": {

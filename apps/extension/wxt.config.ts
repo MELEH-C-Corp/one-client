@@ -70,8 +70,8 @@ function getPublicAssetsVariant(): 'prod' | 'beta' | 'dev' | 'local' {
 
 const publicAssetsVariant = getPublicAssetsVariant()
 
-const BASE_NAME = 'Uniswap Extension'
-const BASE_DESCRIPTION = "The Uniswap Extension is a self-custody crypto wallet that's built for swapping."
+const BASE_NAME = 'MELEH ONE'
+const BASE_DESCRIPTION = 'MELEH ONE is a self-custody crypto wallet with a connected neobank account.'
 const BASE_VERSION = '1.86.0'
 
 const BUILD_NUM = parseInt(process.env.BUILD_NUM || '0')

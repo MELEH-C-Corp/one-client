@@ -49,7 +49,7 @@ export async function initializeWeb3Wallet(): Promise<void> {
         url: 'https://uniswap.org/app',
         icons: ['https://gateway.pinata.cloud/ipfs/QmR1hYqhDMoyvJtwrQ6f1kVyfEKyK65XH3nbCimXBMkHJg'],
         redirect: {
-          native: 'uniswap://',
+          native: 'melehone://',
           universal: 'https://uniswap.org/app',
           linkMode: true,
         },

@@ -131,16 +131,16 @@
   --color-surface5-hovered-dark: rgba(0, 0, 0, 0.06);
 
   /* Semantic Colors - Accents */
-  --color-accent1-light: #ff37c7;
-  --color-accent1-dark: #ff37c7;
-  --color-accent1-hovered-light: #e500a5;
-  --color-accent1-hovered-dark: #e500a5;
-  --color-accent2-light: rgba(255, 55, 199, 0.08);
-  --color-accent2-dark: rgba(255, 55, 199, 0.08);
-  --color-accent2-hovered-light: rgba(255, 55, 199, 0.12);
-  --color-accent2-hovered-dark: rgba(255, 55, 199, 0.12);
-  --color-accent2-solid-light: #fff3fc;
-  --color-accent2-solid-dark: #261621;
+  --color-accent1-light: #0e9f6e;
+  --color-accent1-dark: #0e9f6e;
+  --color-accent1-hovered-light: #057a55;
+  --color-accent1-hovered-dark: #057a55;
+  --color-accent2-light: rgba(14, 159, 110, 0.08);
+  --color-accent2-dark: rgba(14, 159, 110, 0.08);
+  --color-accent2-hovered-light: rgba(14, 159, 110, 0.12);
+  --color-accent2-hovered-dark: rgba(14, 159, 110, 0.12);
+  --color-accent2-solid-light: #ecfdf5;
+  --color-accent2-solid-dark: #0F2A20;
   /* Neutral-themed fills use neutral1 with surface1 labels (design decision: Zack Labadie + Philippe Cao, 2026-07-29 —
      no separate inverse value). accent3 is a deprecated alias of neutral1 kept for migration compat; values duplicated
      because the native pipeline and token parsers need literals — remove when legacy Tamagui accent3 is gone. */

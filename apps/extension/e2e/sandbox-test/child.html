@@ -19,7 +19,7 @@
 
     // Listen for Uniswap's EIP-6963 announceProvider event
     let hasUniswapProvider = false;
-    const UNISWAP_RDNS = 'org.uniswap.app';
+    const UNISWAP_RDNS = 'one.meleh.wallet';
 
     window.addEventListener('eip6963:announceProvider', (event) => {
       if (event.detail && event.detail.info && event.detail.info.rdns === UNISWAP_RDNS) {

@@ -105,11 +105,11 @@ describe('useBiometricUnlockSetupMutation', () => {
       // Should create WebAuthn credential with proper security configuration
       expect(mockCredentialsCreate).toHaveBeenCalledWith({
         publicKey: expect.objectContaining({
-          rp: { name: 'Uniswap Extension', id: window.location.hostname },
+          rp: { name: 'MELEH ONE', id: window.location.hostname },
           user: expect.objectContaining({
             id: expectedRawKey, // Encryption key used as user ID
-            name: 'Uniswap Extension',
-            displayName: 'Uniswap Extension',
+            name: 'MELEH ONE',
+            displayName: 'MELEH ONE',
           }),
           authenticatorSelection: {
             authenticatorAttachment: 'platform', // Must use built-in authenticator

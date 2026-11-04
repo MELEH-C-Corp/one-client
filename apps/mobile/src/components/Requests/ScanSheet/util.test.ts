@@ -64,7 +64,7 @@ describe('getSupportedURI', () => {
   })
 
   it('should return correct values for uniswap scheme v2 URI with wc URI as query param', async () => {
-    const result = await getSupportedURI('uniswap://wc?uri=' + VALID_WC_V2_URI)
+    const result = await getSupportedURI('melehone://wc?uri=' + VALID_WC_V2_URI)
     expect(result).toEqual({
       type: URIType.WalletConnectV2URL,
       value: VALID_WC_V2_URI,
@@ -77,7 +77,7 @@ describe('getSupportedURI', () => {
   })
 
   it('should return correct values for uniswap scheme v2 URI', async () => {
-    const result = await getSupportedURI('uniswap://' + VALID_WC_V2_URI)
+    const result = await getSupportedURI('melehone://' + VALID_WC_V2_URI)
     expect(result).toEqual({
       type: URIType.WalletConnectV2URL,
       value: VALID_WC_V2_URI,
@@ -85,7 +85,7 @@ describe('getSupportedURI', () => {
   })
 
   it('should return undefined for uniswap scheme deep link URI', async () => {
-    const result = await getSupportedURI('uniswap://widget/' + VALID_WC_V2_URI)
+    const result = await getSupportedURI('melehone://widget/' + VALID_WC_V2_URI)
     expect(result).toBeUndefined()
   })
 
@@ -333,7 +333,7 @@ describe('getSupportedURI', () => {
 
     it('should handle malformed percent-encoded URI without crashing', async () => {
       // Malformed URI with invalid percent encoding (% not followed by valid hex)
-      const malformedUri = 'uniswap://wc?uri=%E0%A4%A'
+      const malformedUri = 'melehone://wc?uri=%E0%A4%A'
       // Should not throw an error, even with malformed encoding
       await expect(getSupportedURI(malformedUri)).resolves.not.toThrow()
     })

@@ -20,7 +20,7 @@ test.describe('Extension Onboarding Flow', () => {
 
     // Verify we're on the onboarding page
     const title = await onboardingPage.title()
-    expect(title).toContain('Uniswap Extension')
+    expect(title).toContain('MELEH ONE')
   })
 
   test.skip('sidebar is disabled before onboarding completion', async () => {

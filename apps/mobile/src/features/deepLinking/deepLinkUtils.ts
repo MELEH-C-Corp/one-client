@@ -10,7 +10,7 @@ import { UNISWAP_WEB_HOSTNAME } from 'uniswap/src/constants/urls'
 import { isCurrencyIdValid } from 'uniswap/src/utils/currencyId'
 import { logger } from 'utilities/src/logger/logger'
 
-const UNISWAP_URL_SCHEME_WIDGET = 'uniswap://widget/'
+const UNISWAP_URL_SCHEME_WIDGET = 'melehone://widget/'
 const WALLETCONNECT_URI_SCHEME = 'wc:' // https://eips.ethereum.org/EIPS/eip-1328
 
 export enum DeepLinkAction {

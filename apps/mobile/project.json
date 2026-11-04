@@ -10,19 +10,19 @@
       "defaultConfiguration": "dev",
       "configurations": {
         "dev": {
-          "command": "bunx expo run:android --variant=devDebug --app-id=com.uniswap.mobile.dev"
+          "command": "bunx expo run:android --variant=devDebug --app-id=com.meleh.one.dev"
         },
         "dev-optimized": {
-          "command": "bunx expo run:android --variant=devDebugOptimized --app-id=com.uniswap.mobile.dev"
+          "command": "bunx expo run:android --variant=devDebugOptimized --app-id=com.meleh.one.dev"
         },
         "dev-release": {
-          "command": "bunx expo run:android --variant=devRelease --app-id=com.uniswap.mobile.dev"
+          "command": "bunx expo run:android --variant=devRelease --app-id=com.meleh.one.dev"
         },
         "beta": {
-          "command": "bunx expo run:android --variant=betaDebug --app-id=com.uniswap.mobile.beta"
+          "command": "bunx expo run:android --variant=betaDebug --app-id=com.meleh.one.beta"
         },
         "beta-release": {
-          "command": "bunx expo run:android --variant=betaRelease --app-id=com.uniswap.mobile.beta"
+          "command": "bunx expo run:android --variant=betaRelease --app-id=com.meleh.one.beta"
         },
         "prod": {
           "command": "bunx expo run:android --variant=prodDebug"

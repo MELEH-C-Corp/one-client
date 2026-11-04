@@ -51,9 +51,9 @@
       android:name="com.google.firebase.messaging.default_notification_color"
       android:value="@string/notification_accent_color" />
 
-    <!-- Fully qualified, not ".MainActivity": the flavor applicationIds (com.uniswap.mobile[.dev|.beta])
+    <!-- Fully qualified, not ".MainActivity": the flavor applicationIds (com.meleh.one[.dev|.beta])
          differ from the namespace (com.uniswap), and `expo run:android` resolves the launch activity by
-         appending a relative name to the applicationId — yielding a com.uniswap.mobile.MainActivity that
+         appending a relative name to the applicationId — yielding a com.meleh.one.MainActivity that
          doesn't exist. A qualified name is passed through as-is. -->
     <activity
       android:name="com.uniswap.MainActivity"
@@ -74,7 +74,7 @@
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
 
-        <data android:scheme="uniswap" />
+        <data android:scheme="melehone" />
       </intent-filter>
       <intent-filter>
         <action android:name="android.intent.action.VIEW" />
@@ -146,7 +146,7 @@
     <!-- Trampoline for Expo scheme discovery — see ExpoDevClientSchemeActivity.kt.
          Disabled on purpose: `@expo/config-plugins` reads this manifest statically, so the
          declaration alone is enough. Leaving it enabled makes it a second match for
-         uniswap://expo-development-client/… alongside MainActivity's host-less `uniswap` filter,
+         melehone://expo-development-client/… alongside MainActivity's host-less `uniswap` filter,
          and Android answers a two-way implicit match with the ResolverActivity chooser. -->
     <activity
       android:name="com.uniswap.ExpoDevClientSchemeActivity"
@@ -159,7 +159,7 @@
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
         <data
-          android:scheme="uniswap"
+          android:scheme="melehone"
           android:host="expo-development-client" />
       </intent-filter>
     </activity>

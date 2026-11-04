@@ -312,7 +312,7 @@ struct TokenPriceWidgetEntryView: View {
   }
   
   var body: some View {
-    let deeplinkURL = URL(string: "uniswap://widget/#/tokens/\(entry.configuration.selectedToken?.chain?.lowercased() ?? "")/\(entry.configuration.selectedToken?.address ?? "NATIVE")")
+    let deeplinkURL = URL(string: "melehone://widget/#/tokens/\(entry.configuration.selectedToken?.chain?.lowercased() ?? "")/\(entry.configuration.selectedToken?.address ?? "NATIVE")")
     let shouldRenderPlaceholder = !reasons.isEmpty
     let body = ZStack {
       switch family {
