@@ -1,0 +1,58 @@
+name: Deploy web to Cloudflare Workers
+
+on:
+  push:
+    branches:
+      - 'meleh/main'
+    paths:
+      - 'apps/web/**'
+      - 'packages/**'
+      - 'config/**'
+      - 'bun.lock'
+      - 'package.json'
+      - '.github/workflows/deploy-web.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Deploys run one at a time, in push order; a newer push never cancels a deploy in flight.
+concurrency:
+  group: deploy-web
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and deploy app.meleh.us
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      SKIP_CONFIG_PULL: 'true'
+      NX_DAEMON: 'false'
+      LEFTHOOK: '0'
+      DEPLOYMENT_ENV: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: .bun-version
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build client assets and Worker bundle
+        working-directory: apps/web
+        run: bun run build:workers
+
+      # wrangler runs from the npm cache so it never touches the workspace lockfile.
+      - name: Deploy to Cloudflare Workers
+        working-directory: apps/web
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --yes wrangler@4.157.0 deploy

@@ -98,6 +98,7 @@
         "e2e": { "env": { "CONFIG_ENV": "staging" } },
         "vercel": { "env": { "CONFIG_ENV": "staging" } },
         "ecs": { "env": { "SKIP_CONFIG_PULL": "true" } },
+        "workers": { "env": { "SKIP_CONFIG_PULL": "true" } },
         "ipfs": { "env": { "CONFIG_ENV": "production" } }
       }
     },

@@ -1,5 +1,5 @@
 // MELEH ONE web app on Cloudflare Workers + Static Assets.
-// Build with `bun run build:workers` (client assets + server bundle), then `wrangler deploy` from apps/web.
+// Deployed by .github/workflows/deploy-web.yml on push to meleh/main. Manual: `bun run deploy:workers` in apps/web.
 {
   "name": "meleh-one-web",
   "main": "build/worker/index.mjs",
