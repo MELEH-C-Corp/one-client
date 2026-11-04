@@ -45,6 +45,19 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      # Vite reads build config only from apps/web/.env*, so CI writes the public, per-deployment
+      # values into the git-ignored .env.override. Set them under repository Variables.
+      - name: Write build config
+        working-directory: apps/web
+        env:
+          WALLETCONNECT_PROJECT_ID: ${{ vars.WALLETCONNECT_PROJECT_ID }}
+        run: |
+          if [ -z "$WALLETCONNECT_PROJECT_ID" ]; then
+            echo "::error::Set the WALLETCONNECT_PROJECT_ID repository variable (Settings > Secrets and variables > Actions > Variables)"
+            exit 1
+          fi
+          printf 'WALLETCONNECT_PROJECT_ID="%s"\n' "$WALLETCONNECT_PROJECT_ID" > .env.override
+
       - name: Build client assets and Worker bundle
         working-directory: apps/web
         run: bun run build:workers

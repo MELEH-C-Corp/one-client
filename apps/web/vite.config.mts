@@ -172,6 +172,7 @@ export default defineConfig(({ mode, command, isPreview }) => {
   const isVercelDeploy = DEPLOY_TARGET === 'vercel'
   const isEcsDeploy = DEPLOY_TARGET === 'ecs'
   const isIpfsDeploy = DEPLOY_TARGET === 'ipfs'
+  const isWorkersDeploy = DEPLOY_TARGET === 'workers'
   if (isIpfsDeploy) {
     // IPFS gateways have no same-origin BFF: hit the entry gateway and statsig proxy directly (both allow cross-origin).
     env.ENABLE_ENTRY_GATEWAY_PROXY = 'false'
@@ -248,7 +249,7 @@ export default defineConfig(({ mode, command, isPreview }) => {
     'process.env.VERSION': JSON.stringify(bundleVersion),
     // Serving stack this artifact is built for; tags DD RUM + Amplitude events per cohort.
     'process.env.WEB_BUILD_TYPE': JSON.stringify(
-      isEcsDeploy ? 'ecs' : isVercelDeploy ? 'vercel' : isIpfsDeploy ? 'ipfs' : 'local',
+      isEcsDeploy ? 'ecs' : isVercelDeploy ? 'vercel' : isIpfsDeploy ? 'ipfs' : isWorkersDeploy ? 'workers' : 'local',
     ),
   }
 

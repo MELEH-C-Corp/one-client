@@ -74,7 +74,7 @@
           "command": "NODE_OPTIONS=\"--max-old-space-size=$([ -n \\\"$GITHUB_ACTIONS\\\" ] && echo 32768 || echo 16384)\" DISABLE_SOURCEMAP=true DEPLOY_TARGET=ipfs vite build"
         },
         "workers": {
-          "command": "ENABLE_ENTRY_GATEWAY_PROXY=true DISABLE_SOURCEMAP=true NODE_OPTIONS=\"--max-old-space-size=$([ -n \\\"$GITHUB_ACTIONS\\\" ] && echo 32768 || echo 10240)\" vite build --mode ${VITE_MODE:-production} && DEPLOY_TARGET=workers vite build -c vite.server.config.mts"
+          "command": "ENABLE_ENTRY_GATEWAY_PROXY=true DISABLE_SOURCEMAP=true DEPLOY_TARGET=workers NODE_OPTIONS=\"--max-old-space-size=$([ -n \\\"$GITHUB_ACTIONS\\\" ] && echo 32768 || echo 10240)\" vite build --mode ${VITE_MODE:-production} && DEPLOY_TARGET=workers vite build -c vite.server.config.mts"
         }
       }
     },
