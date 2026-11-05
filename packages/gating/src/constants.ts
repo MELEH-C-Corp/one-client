@@ -12,3 +12,10 @@ export enum StatsigCustomAppValue {
  * can derive the same storage slots (e.g. local-override persistence) the app under test uses.
  */
 export const TEST_STATSIG_SDK_KEY = 'dummy-test-key'
+
+/**
+ * Placeholder Statsig SDK key for builds without a Statsig key (MELEH ONE until it has its own
+ * Statsig project). The client then runs fully offline: every gate and config resolves to its
+ * in-code default and no gating traffic leaves the app (see `isStatsigOffline`).
+ */
+export const OFFLINE_STATSIG_SDK_KEY = 'client-offline'

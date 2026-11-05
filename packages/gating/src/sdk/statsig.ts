@@ -1,7 +1,7 @@
 import { StatsigClient, type StatsigOptions, type StatsigUser } from '@statsig/react-bindings'
 import { getConfig } from '@universe/config'
 import { isTestEnv } from '@universe/environment'
-import { TEST_STATSIG_SDK_KEY } from '@universe/gating/src/constants'
+import { OFFLINE_STATSIG_SDK_KEY, TEST_STATSIG_SDK_KEY } from '@universe/gating/src/constants'
 import { LocalOverrideAdapterWrapper } from '@universe/gating/src/LocalOverrideAdapterWrapper'
 
 export {
@@ -25,26 +25,28 @@ export {
 
 let localOverrideAdapter: LocalOverrideAdapterWrapper | undefined
 
-function getStatsigApiKeyOrThrow(): string {
+/** True when no Statsig key is configured: gates run offline on their in-code defaults. */
+export function isStatsigOffline(): boolean {
+  return !isTestEnv() && !getConfig().statsigApiKey
+}
+
+export function getStatsigApiKey(): string {
   // A dummy key is used in test env b/c the wallet/mobile tests use this file instead of the statsig.native file
-  const statsigApiKey = isTestEnv() ? TEST_STATSIG_SDK_KEY : getConfig().statsigApiKey
-
-  if (!statsigApiKey) {
-    throw new Error('STATSIG_API_KEY is not set')
+  if (isTestEnv()) {
+    return TEST_STATSIG_SDK_KEY
   }
-
-  return statsigApiKey
+  return getConfig().statsigApiKey || OFFLINE_STATSIG_SDK_KEY
 }
 
 export function getOverrideAdapter(): LocalOverrideAdapterWrapper {
   if (!localOverrideAdapter) {
-    localOverrideAdapter = new LocalOverrideAdapterWrapper(getStatsigApiKeyOrThrow(), getStatsigClient)
+    localOverrideAdapter = new LocalOverrideAdapterWrapper(getStatsigApiKey(), getStatsigClient)
   }
   return localOverrideAdapter
 }
 
 export function getStatsigClient(): StatsigClient {
-  return StatsigClient.instance(getStatsigApiKeyOrThrow())
+  return StatsigClient.instance(getStatsigApiKey())
 }
 
 /**
@@ -52,5 +54,5 @@ export function getStatsigClient(): StatsigClient {
  * need this for any saga path, but the symmetric API lets it opt in the same way.
  */
 export function bootstrapStatsigClient(user: StatsigUser, options: StatsigOptions): StatsigClient {
-  return new StatsigClient(getStatsigApiKeyOrThrow(), user, options)
+  return new StatsigClient(getStatsigApiKey(), user, options)
 }

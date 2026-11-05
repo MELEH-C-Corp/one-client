@@ -1,6 +1,6 @@
 {
   "defaultSrc": ["'self'"],
-  "scriptSrc": ["'self'", "'wasm-unsafe-eval'", "https://challenges.cloudflare.com"],
+  "scriptSrc": ["'self'", "'wasm-unsafe-eval'", "https://challenges.cloudflare.com", "https://static.cloudflareinsights.com"],
   "styleSrc": [
     "'self'",
     "'unsafe-inline'",
@@ -46,6 +46,8 @@
     "https://*.nodereal.io",
     "https://*.optimism.io",
     "https://*.quiknode.pro",
+    "https://*.meleh.us",
+    "https://cloudflareinsights.com",
     "https://*.uniswap.org",
     "https://*.walletconnect.com",
     "https://*.walletconnect.org",
@@ -119,6 +121,7 @@
     "https://invalid.rpki.cloudflare.com/",
     "https://dnssec-oracle.ens.domains/",
     "https://ccip-v3.ens.xyz",
+    "wss://*.meleh.us",
     "wss://*.uniswap.org",
     "wss://mm-sdk-relay.api.cx.metamask.io",
     "wss://relay.walletconnect.com",

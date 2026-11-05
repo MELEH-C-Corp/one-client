@@ -1,6 +1,7 @@
 import { _getInstance, StatsigClientEventCallback } from '@statsig/client-core'
 import { PrecomputedEvaluationsInterface } from '@statsig/js-client'
 import { getConfig } from '@universe/config'
+import { OFFLINE_STATSIG_SDK_KEY } from '@universe/gating/src/constants'
 import { getOverrideAdapter, getStatsigClient } from '@universe/gating/src/sdk/statsig'
 
 export function isStatsigReady(client: PrecomputedEvaluationsInterface): boolean {
@@ -14,7 +15,7 @@ export function isStatsigReady(client: PrecomputedEvaluationsInterface): boolean
  */
 export function isStatsigClientRegistered(): boolean {
   try {
-    return _getInstance(getConfig().statsigApiKey) != null
+    return _getInstance(getConfig().statsigApiKey || OFFLINE_STATSIG_SDK_KEY) != null
   } catch {
     return false
   }

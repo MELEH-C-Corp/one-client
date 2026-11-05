@@ -103,7 +103,9 @@ export type { StatsigOptions, StatsigUser, StorageProvider } from '@universe/gat
 export {
   bootstrapStatsigClient,
   getOverrideAdapter,
+  getStatsigApiKey,
   getStatsigClient,
+  isStatsigOffline,
   StatsigClient,
   StatsigContext,
   StatsigProvider,
