@@ -57,6 +57,6 @@ describe('disable nft on searchbar', () => {
 
     render(<SearchBar />)
 
-    expect(screen.getByText('Search Uniswap')).toBeInTheDocument()
+    expect(screen.getByText('Search MELEH ONE')).toBeInTheDocument()
   })
 })
