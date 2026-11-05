@@ -2532,7 +2532,7 @@
   "scantastic.error.timeout.title": "Your connection timed out",
   "scantastic.modal.ipMismatch.description": "To scan this QR code, your phone must be connected to the same WiFi network as your computer and any VPNs should be temporarily turned off.",
   "scantastic.modal.ipMismatch.title": "Switch your WiFi network",
-  "search.input.placeholder.header": "Search Uniswap",
+  "search.input.placeholder.header": "Search MELEH ONE",
   "search.input.placeholder.modal": "Search by name, symbol, or address",
   "search.results.auction.startsIn": "Starts in {{time}}",
   "search.results.auction.timeRemaining": "{{time}} remaining",

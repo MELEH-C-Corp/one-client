@@ -27,21 +27,21 @@ export function mergeVerificationStatuses(
   return DappVerificationStatus.Verified
 }
 
-const FIRST_PARTY_HOSTNAMES: ReadonlySet<string> = new Set([UNISWAP_WEB_HOSTNAME])
+const FIRST_PARTY_ORIGIN = `https://${UNISWAP_WEB_HOSTNAME}`
 
 export function isFirstPartyDapp(url: string | undefined): boolean {
   if (!url) {
     return false
   }
   try {
-    return FIRST_PARTY_HOSTNAMES.has(new URL(url).hostname)
+    return new URL(url).origin === FIRST_PARTY_ORIGIN
   } catch {
     return false
   }
 }
 
 /**
- * Treats first-party Uniswap dapps as Verified when upstream signals (Blockaid, WC Verify)
+ * Treats the first-party MELEH ONE dapp as Verified when upstream signals (Blockaid, WC Verify)
  * default to Unverified due to indexing gaps or transient failures. Threat is preserved so
  * a genuine malicious signal is never suppressed.
  *

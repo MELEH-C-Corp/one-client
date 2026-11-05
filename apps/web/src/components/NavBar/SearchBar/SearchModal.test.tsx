@@ -100,7 +100,7 @@ describe('SearchModal', () => {
 
     render(<SearchModal isAuctionSearchEnabled={false} />)
 
-    expect(screen.getByPlaceholderText('Search Uniswap')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('Search MELEH ONE')).toBeInTheDocument()
     expect(screen.queryByPlaceholderText('Search by name, symbol, or address')).not.toBeInTheDocument()
   })
 })

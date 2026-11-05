@@ -114,14 +114,17 @@ describe('mergeVerificationStatuses', () => {
 })
 
 describe('isFirstPartyDapp', () => {
-  it('returns true for app.uniswap.org', () => {
-    expect(isFirstPartyDapp('https://app.uniswap.org')).toBe(true)
-    expect(isFirstPartyDapp('https://app.uniswap.org/swap?foo=bar')).toBe(true)
+  it('returns true for app.meleh.us', () => {
+    expect(isFirstPartyDapp('https://app.meleh.us')).toBe(true)
+    expect(isFirstPartyDapp('https://app.meleh.us/swap?foo=bar')).toBe(true)
   })
 
-  it('returns false for non-first-party hostnames', () => {
+  it('returns false for non-first-party origins', () => {
+    expect(isFirstPartyDapp('https://app.uniswap.org')).toBe(false)
+    expect(isFirstPartyDapp('http://app.meleh.us')).toBe(false)
+    expect(isFirstPartyDapp('https://app.meleh.us:8443')).toBe(false)
     expect(isFirstPartyDapp('https://uniswap.org')).toBe(false)
-    expect(isFirstPartyDapp('https://evil.app.uniswap.org.attacker.com')).toBe(false)
+    expect(isFirstPartyDapp('https://evil.app.meleh.us.attacker.com')).toBe(false)
     expect(isFirstPartyDapp('https://example.com')).toBe(false)
   })
 
@@ -132,7 +135,7 @@ describe('isFirstPartyDapp', () => {
 })
 
 describe('applyFirstPartyOverride', () => {
-  const firstPartyUrl = 'https://app.uniswap.org'
+  const firstPartyUrl = 'https://app.meleh.us'
   const thirdPartyUrl = 'https://example.com'
 
   it('upgrades Unverified to Verified for first-party URL', () => {
